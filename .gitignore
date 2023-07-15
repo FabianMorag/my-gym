@@ -1,4 +1,7 @@
-#package log
+# builded project
+dist/
+
+# package log
 package-lock.json
 
 # dependencies
