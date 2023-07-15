@@ -1,0 +1,20 @@
+---
+const { name, img, date, comment } = Astro.props;
+---
+
+<div class="p-3 w-full">
+  <div class="shadow-md h-full rounded-lg overflow-hidden">
+    <div class="flex justify-center py-3 bg-gray-200">
+      <img
+        class="w-20 aspect-square object-cover rounded-full"
+        src={img}
+        alt=`thumbnail image of ${name}`
+      />
+    </div>
+    <div class="flex flex-col text-center p-6">
+      <span class="font-semibold text-[#04040C]">{name}</span>
+      <span class="text-xs text-gray-500 mb-6">{date}</span>
+      <span class="text-sm text-[#04040C]">{comment}</span>
+    </div>
+  </div>
+</div>

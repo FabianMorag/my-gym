@@ -1,0 +1,644 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CommentCard from "../components/CommentCard.astro";
+import reviews from "../mock/comments.json";
+import ClassCard from "../components/ClassCard.astro";
+import gymClasses from "../mock/gym-classes.json";
+---
+
+<Layout title="Welcome to MyGYM">
+	<main>
+		<section
+			id="hero"
+			class="flex items-center w-full lg:pt-20 text-white bg-[#04040C]"
+		>
+			<video
+				autoplay
+				loop
+				muted
+				src="/video.mp4"
+				class="hidden absolute w-screen object-cover"></video>
+			<div
+				class="relative items-center w-full px-5 py-24 mx-auto md:px-12 lg:px-16 max-w-7xl"
+			>
+				<div class="relative flex-col items-start m-auto align-middle">
+					<div class="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-24">
+						<div class="relative items-center gap-12 m-auto lg:inline-flex">
+							<div class="max-w-xl text-center lg:text-left">
+								<div>
+									<p
+										class="text-base text-white font-medium relative z-10 tracking-tight sm:text-lg"
+									>
+										COME AND TRAIN WITH US
+									</p>
+									<img
+										id="claw"
+										src="/claw.svg"
+										class="absolute rotate-90 -top-48 left-0 opacity-90 w-[95%]"
+										alt="claw"
+									/>
+									<p
+										class="text-5xl font-bold relative z-10 mt-4 tracking-tight sm:text-5xl"
+									>
+										LET'S GET A FIT AND<br />PERFECT BODY
+									</p>
+								</div>
+								<div class="flex justify-center gap-3 mt-10 lg:justify-start">
+									<a
+										class="inline-flex items-center justify-center text-gray-700 text-lg font-semibold relative z-10 rounded-md px-6 py-2 duration-200 bg-white hover:text-[#D6A22C] focus:outline-none focus-visible:outline-gray-600"
+										href="/pricing"
+									>
+										<span class="mr-2">JOIN US!</span>
+										<img class="h-6" src="/right-arrow.svg" alt="right-arrow" />
+									</a>
+								</div>
+							</div>
+							<div class="relative z-10">
+								<ul
+									class="flex flex-row justify-center lg:p-0 mt-4 lg:flex-col lg:gap-4"
+								>
+									<li>
+										<a
+											href="#"
+											class="flex py-2 px-3 transition-all rounded hover:scale-150 lg:hover:bg-transparent lg:border-0 lg:p-0"
+											><img
+												class="h-8 lg-h12"
+												src="/facebook-logo.svg"
+												alt="facebook logo"
+											/></a
+										>
+									</li>
+									<li>
+										<a
+											href="#"
+											class="flex py-2 px-3 transition-all rounded hover:scale-150 lg:hover:bg-transparent lg:border-0 lg:p-0"
+											><img
+												class="h-8 lg-h12"
+												src="/instagram-logo.svg"
+												alt="instagram logo"
+											/></a
+										>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div
+							class="order-first block w-full mt-12 aspect-square lg:mt-0 lg:order-first"
+						>
+							<img
+								src="/main-hero.png"
+								class="object-cover object-center w-full mx-auto lg:ml-auto"
+								alt="hero"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="reviews" class="px-12 py-24">
+			<div class="max-w-7xl m-auto">
+				<p
+					class="text-center font-semibold text-4xl text-[#04040C] mb-8 md:text-5xl md:mb-14"
+				>
+					WE ARE ONE OF THE BEST GYMS IN THE WORLD!
+				</p>
+				<div class="overflow-hidden mb-14">
+					<!-- Carousel wrapper -->
+					<div class="wrapper flex w-[200rem] lg:w-[300rem]">
+						{
+							reviews.map((review) => (
+								<CommentCard
+									name={review.name}
+									img={review.img}
+									date={review.date}
+									comment={review.comment}
+								/>
+							))
+						}
+						{
+							reviews.map((review) => (
+								<CommentCard
+									name={review.name}
+									img={review.img}
+									date={review.date}
+									comment={review.comment}
+								/>
+							))
+						}
+					</div>
+				</div>
+				<svg
+					aria-hidden="true"
+					class="flex-shrink-0 w-10 h-10 text-[#D1A133] mx-auto mb-4"
+					fill="currentColor"
+					viewBox="0 0 20 20"
+					xmlns="http://www.w3.org/2000/svg"
+					><title>Check icon</title><path
+						fill-rule="evenodd"
+						d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+						clip-rule="evenodd"></path></svg
+				>
+				<p
+					class="text-center font-semibold text-3xl text-[#04040C] mb-8 md:text-3xl md:mb-10"
+				>
+					Our quality and commitment is priority
+				</p>
+				<p
+					class="text-center font-semibold text-xl text-gray-500 mb-8 md:text-2xl md:mb-14"
+				>
+					We are involved in all your proccess!
+				</p>
+			</div>
+		</section>
+
+		<section id="classes" class="px-12 py-24 bg-[#04040C]">
+			<div class="text-white max-w-7xl m-auto">
+				<p
+					class="text-center font-semibold text-4xl text-white mb-4 md:text-5xl md:mb-14"
+				>
+					WE HAVE THE MOST VARIABLE CLASSES FOR YOU
+				</p>
+				<p
+					class="text-center font-semibold text-md text-gray-500 mb-12 md:text-xl md:mb-20"
+				>
+					THERE ARE CLASSES FOR EVERYONE!
+				</p>
+				<div
+					class="grid grid-cols-2 gap-6 place-items-center mb-10 md:text-lg md:grid-cols-3"
+				>
+					{
+						gymClasses.map((gymClass) => (
+							<ClassCard name={gymClass.name} img={gymClass.img} />
+						))
+					}
+				</div>
+				<a
+					href="/all-classes"
+					target="_self"
+					class="flex justify-center font-semibold text-md text-yellow-400"
+					>See more...</a
+				>
+			</div>
+		</section>
+
+		<section class="px-12 py-12">
+			<div class="text-[#04040C] max-w-7xl m-auto">
+				<p class="text-center font-semibold text-2xl mb-4">
+					SUBSCRIBE TO CLASSES AND COME FOR ALL THE SESSION YOU WISH⚡
+				</p>
+				<p class="text-center text-gray-500 font-semibold text-lg">
+					START YOUR MEMBERSHIP NOW!
+				</p>
+			</div>
+		</section>
+
+		<section id="plans" class="px-12 py-24 bg-[#04040C]">
+			<div class="max-w-7xl m-auto">
+				<p
+					class="text-center font-semibold text-4xl text-white mb-8 md:text-5xl md:mb-14"
+				>
+					CHECK OUR PLANS AND JOIN US!
+				</p>
+				<div class="flex">
+					<div
+						id="plan-selector"
+						class="text-white border border-gray-600 rounded-3xl mx-auto mb-8 p-1"
+					>
+						<button
+							type="button"
+							class="bg-[#D1A133] rounded-2xl ease-in-out duration-150 py-1 px-2"
+							>Personal</button
+						>
+						<button
+							type="button"
+							class="rounded-2xl ease-in-out duration-150 py-1 px-2"
+							>Enterprise</button
+						>
+					</div>
+				</div>
+				<div class="flex flex-col gap-8 text-white lg:flex-row lg:gap-0">
+					<div
+						class="flex flex-col w-full py-8 px-12 min-h-full border border-gray-700 rounded-lg sm:p-8"
+					>
+						<h5 class="text-xl font-medium">Starter plan</h5>
+						<h6 class="mb-4 text-sm text-gray-400 font-medium">
+							Monthly billed
+						</h6>
+						<div class="flex items-baseline">
+							<span class="text-3xl font-semibold">$</span>
+							<span class="text-5xl font-extrabold tracking-tight">16</span>
+							<span class="ml-1 text-xl font-normal">/month</span>
+						</div>
+						<!-- List -->
+						<ul role="list" class="flex-grow space-y-5 my-7">
+							<li class="flex space-x-3">
+								<!-- Icon -->
+								<svg
+									aria-hidden="true"
+									class="flex-shrink-0 w-5 h-5 text-blue-600"
+									fill="currentColor"
+									viewBox="0 0 20 20"
+									xmlns="http://www.w3.org/2000/svg"
+									><title>Check icon</title><path
+										fill-rule="evenodd"
+										d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+										clip-rule="evenodd"></path></svg
+								>
+								<span class="text-base font-normal leading-tight"
+									>Access to all the instruments</span
+								>
+							</li>
+							<li class="flex space-x-3">
+								<!-- Icon -->
+								<svg
+									aria-hidden="true"
+									class="flex-shrink-0 w-5 h-5 text-blue-600"
+									fill="currentColor"
+									viewBox="0 0 20 20"
+									xmlns="http://www.w3.org/2000/svg"
+									><title>Check icon</title><path
+										fill-rule="evenodd"
+										d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+										clip-rule="evenodd"></path></svg
+								>
+								<span class="text-base font-normal leading-tight"
+									>Personal trainer</span
+								>
+							</li>
+							<li class="flex space-x-3">
+								<!-- Icon -->
+								<svg
+									aria-hidden="true"
+									class="flex-shrink-0 w-5 h-5 text-blue-600"
+									fill="currentColor"
+									viewBox="0 0 20 20"
+									xmlns="http://www.w3.org/2000/svg"
+									><title>Check icon</title><path
+										fill-rule="evenodd"
+										d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+										clip-rule="evenodd"></path></svg
+								>
+								<span class="text-base font-normal leading-tight"
+									>Unlimited sessions
+								</span>
+							</li>
+						</ul>
+						<a
+							href="/pricing"
+							class="bg-gray-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-200 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center"
+							>Choose plan</a
+						>
+					</div>
+					<div
+						class="flex flex-col w-full py-8 px-12 min-h-full border-2 border-[#D1A133] bg-gray-900 rounded-lg sm:p-8 lg:scale-105"
+					>
+						<div class="flex justify-between">
+							<div>
+								<h5 class="text-xl font-medium">Advanced plan</h5>
+								<h6 class="mb-4 text-sm text-gray-400 font-medium">
+									Quarterly billed
+								</h6>
+							</div>
+
+							<span class="h-fit bg-[#D1A133] py-1 px-3 rounded-full"
+								>Most popular</span
+							>
+						</div>
+						<div class="flex items-baseline">
+							<span class="text-3xl font-semibold">$</span>
+							<span class="text-5xl font-extrabold tracking-tight">44</span>
+							<span class="ml-1 text-xl font-normal">/quarter</span>
+						</div>
+						<!-- List -->
+						<ul role="list" class="flex-grow space-y-5 my-7">
+							<li class="flex space-x-3">
+								<!-- Icon -->
+								<svg
+									aria-hidden="true"
+									class="flex-shrink-0 w-5 h-5 text-blue-600"
+									fill="currentColor"
+									viewBox="0 0 20 20"
+									xmlns="http://www.w3.org/2000/svg"
+									><title>Check icon</title><path
+										fill-rule="evenodd"
+										d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+										clip-rule="evenodd"></path></svg
+								>
+								<span class="text-base font-normal leading-tight"
+									>Access to all the instruments</span
+								>
+							</li>
+							<li class="flex space-x-3">
+								<!-- Icon -->
+								<svg
+									aria-hidden="true"
+									class="flex-shrink-0 w-5 h-5 text-blue-600"
+									fill="currentColor"
+									viewBox="0 0 20 20"
+									xmlns="http://www.w3.org/2000/svg"
+									><title>Check icon</title><path
+										fill-rule="evenodd"
+										d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+										clip-rule="evenodd"></path></svg
+								>
+								<span class="text-base font-normal leading-tight"
+									>Personal trainer</span
+								>
+							</li>
+							<li class="flex space-x-3">
+								<!-- Icon -->
+								<svg
+									aria-hidden="true"
+									class="flex-shrink-0 w-5 h-5 text-blue-600"
+									fill="currentColor"
+									viewBox="0 0 20 20"
+									xmlns="http://www.w3.org/2000/svg"
+									><title>Check icon</title><path
+										fill-rule="evenodd"
+										d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+										clip-rule="evenodd"></path></svg
+								>
+								<span class="text-base font-normal leading-tight"
+									>Unlimited sessions
+								</span>
+							</li>
+							<li class="flex space-x-3">
+								<!-- Icon -->
+								<svg
+									aria-hidden="true"
+									class="flex-shrink-0 w-5 h-5 text-blue-600"
+									fill="currentColor"
+									viewBox="0 0 20 20"
+									xmlns="http://www.w3.org/2000/svg"
+									><title>Check icon</title><path
+										fill-rule="evenodd"
+										d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+										clip-rule="evenodd"></path></svg
+								>
+								<span class="text-base font-normal leading-tight"
+									>Orientation about nutrition
+								</span>
+							</li>
+						</ul>
+						<a
+							href="/pricing"
+							class="bg-[#D1A133] hover:bg-yellow-400 focus:ring-4 focus:outline-none focus:ring-blue-200 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center"
+							>Choose plan</a
+						>
+					</div>
+					<div
+						class="flex flex-col w-full py-8 px-12 min-h-full border border-gray-700 rounded-lg sm:p-8"
+					>
+						<h5 class="text-xl font-medium">Fitness plan</h5>
+						<h6 class="mb-4 text-sm text-gray-400 font-medium">
+							Anually billed
+						</h6>
+						<div class="flex items-baseline">
+							<span class="text-3xl font-semibold">$</span>
+							<span class="text-5xl font-extrabold tracking-tight">163</span>
+							<span class="ml-1 text-xl font-normal">/year</span>
+						</div>
+						<!-- List -->
+						<ul role="list" class="flex-grow space-y-5 my-7">
+							<li class="flex space-x-3">
+								<!-- Icon -->
+								<svg
+									aria-hidden="true"
+									class="flex-shrink-0 w-5 h-5 text-blue-600"
+									fill="currentColor"
+									viewBox="0 0 20 20"
+									xmlns="http://www.w3.org/2000/svg"
+									><title>Check icon</title><path
+										fill-rule="evenodd"
+										d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+										clip-rule="evenodd"></path></svg
+								>
+								<span class="text-base font-normal leading-tight"
+									>Access to all the instruments</span
+								>
+							</li>
+							<li class="flex space-x-3">
+								<!-- Icon -->
+								<svg
+									aria-hidden="true"
+									class="flex-shrink-0 w-5 h-5 text-blue-600"
+									fill="currentColor"
+									viewBox="0 0 20 20"
+									xmlns="http://www.w3.org/2000/svg"
+									><title>Check icon</title><path
+										fill-rule="evenodd"
+										d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+										clip-rule="evenodd"></path></svg
+								>
+								<span class="text-base font-normal leading-tight"
+									>Personal trainer</span
+								>
+							</li>
+							<li class="flex space-x-3">
+								<!-- Icon -->
+								<svg
+									aria-hidden="true"
+									class="flex-shrink-0 w-5 h-5 text-blue-600"
+									fill="currentColor"
+									viewBox="0 0 20 20"
+									xmlns="http://www.w3.org/2000/svg"
+									><title>Check icon</title><path
+										fill-rule="evenodd"
+										d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+										clip-rule="evenodd"></path></svg
+								>
+								<span class="text-base font-normal leading-tight"
+									>Unlimited sessions
+								</span>
+							</li>
+							<li class="flex space-x-3">
+								<!-- Icon -->
+								<svg
+									aria-hidden="true"
+									class="flex-shrink-0 w-5 h-5 text-blue-600"
+									fill="currentColor"
+									viewBox="0 0 20 20"
+									xmlns="http://www.w3.org/2000/svg"
+									><title>Check icon</title><path
+										fill-rule="evenodd"
+										d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+										clip-rule="evenodd"></path></svg
+								>
+								<span class="text-base font-normal leading-tight"
+									>Orientation about nutrition
+								</span>
+							</li>
+							<li class="flex space-x-3">
+								<!-- Icon -->
+								<svg
+									aria-hidden="true"
+									class="flex-shrink-0 w-5 h-5 text-blue-600"
+									fill="currentColor"
+									viewBox="0 0 20 20"
+									xmlns="http://www.w3.org/2000/svg"
+									><title>Check icon</title><path
+										fill-rule="evenodd"
+										d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+										clip-rule="evenodd"></path></svg
+								>
+								<span class="text-base font-normal leading-tight"
+									>Professional medical monitoring</span
+								>
+							</li>
+						</ul>
+						<a
+							href="/pricing"
+							class="bg-gray-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-200 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center"
+							>Choose plan</a
+						>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="contact" class="px-12 py-24">
+			<div class="max-w-7xl text-[#04040C] m-auto">
+				<p class="text-center font-semibold text-4xl mb-8 md:text-5xl md:mb-14">
+					IF YOU NEED MORE INFORMATION WE WILL CONTACT YOU!
+				</p>
+				<div class="md:flex">
+					<div class="w-full grid place-items-center mb-8">
+						<img
+							src="/class.webp"
+							alt="A man and a woman talking and looking a book"
+							class="object-contain h-[30rem]"
+						/>
+					</div>
+					<div class="w-full grid place-items-center">
+						<div class="hidden w-full text-center">
+							<p class="font-bold text-2xl md:text-left">Thank you!</p>
+							<p class="text-lg md:text-left">We will contact you very soon</p>
+						</div>
+						<form class="w-full">
+							<div class="md:flex md:gap-4">
+								<div class="w-full">
+									<label
+										for="email-address-icon"
+										class="block mb-2 text-sm font-medium text-gray-900"
+										>Your first name</label
+									>
+									<input
+										type="text"
+										id="email-address-icon"
+										class="bg-gray-50 mb-4 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-yellow-300 focus:border-yellow-300 block w-full p-2.5"
+										placeholder="Name"
+										required
+									/>
+								</div>
+								<div class="w-full">
+									<label
+										for="email-address-icon"
+										class="block mb-2 text-sm font-medium text-gray-900"
+										>Your last name</label
+									>
+									<input
+										type="text"
+										id="email-address-icon"
+										class="bg-gray-50 mb-4 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-yellow-300 focus:border-yellow-300 block w-full p-2.5"
+										placeholder="Last name"
+										required
+									/>
+								</div>
+							</div>
+							<label
+								for="email-address-icon"
+								class="block mb-2 text-sm font-medium text-gray-900"
+								>Your Email</label
+							>
+							<input
+								type="text"
+								id="email-address-icon"
+								class="bg-gray-50 mb-4 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-yellow-300 focus:border-yellow-300 block w-full p-2.5"
+								placeholder="name@example.com"
+								required
+							/>
+							<label
+								for="message"
+								class="block mb-2 text-sm font-medium text-gray-900"
+								>Your message</label
+							>
+							<textarea
+								id="message"
+								rows="4"
+								class="block mb-4 p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-yellow-300 focus:border-yellow-300"
+								placeholder="Leave a comment..."></textarea>
+							<button
+								type="submit"
+								class="bg-[#D1A133] text-white font-bold w-full rounded-md py-3"
+								>Contact me!</button
+							>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	.wrapper {
+		animation: scroll 20s linear infinite;
+		-webkit-animation: scroll 20s linear infinite;
+	}
+
+	@keyframes scroll {
+		0% {
+			transform: translateX(0);
+			-webkit-transform: translateX(0);
+		}
+		100% {
+			transform: translateX(-100rem);
+			-webkit-transform: translateX(-100rem);
+		}
+	}
+</style>
+
+<script async type="module">
+const defaultPrices = await fetch("src/mock/plans.json").then((res) =>
+	res.json()
+);
+console.log(defaultPrices);
+
+const planSelector = [...document.querySelectorAll("#plan-selector button")];
+const yellowBg = "bg-[#D1A133]";
+
+planSelector.forEach((btn) => {
+	btn.addEventListener("click", (e) => {
+		if (e.target.classList.contains(yellowBg)) return;
+
+		if (!e.target.classList.contains(yellowBg)) {
+			const yellowBgBtn = planSelector.find((e) =>
+				e.classList.contains(yellowBg)
+			);
+			yellowBgBtn.classList.remove(yellowBg);
+			e.target.classList.add(yellowBg);
+
+			const selection = e.target.textContent.toLowerCase();
+			const actualPrices = [
+				...document
+					.querySelector("#plan-selector")
+					.parentElement.parentElement.querySelectorAll(".tracking-tight"),
+			];
+			actualPrices[0].textContent = defaultPrices[selection]["starter"];
+			actualPrices[1].textContent = defaultPrices[selection]["advanced"];
+			actualPrices[2].textContent = defaultPrices[selection]["fitness"];
+		}
+	});
+});
+</script>
+
+<script type="module">
+const thanksMsg = document.querySelector("#contact .hidden");
+const form = document.querySelector("#contact form");
+document.querySelector("form").addEventListener("submit", (e) => {
+	e.preventDefault();
+	thanksMsg.classList.remove("hidden");
+	form.classList.add("hidden");
+});
+</script>

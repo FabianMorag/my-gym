@@ -1,0 +1,12 @@
+{
+  "personal": {
+    "starter": 16,
+    "advanced": 44,
+    "fitness": 163
+  },
+  "enterprise": {
+    "starter": 154,
+    "advanced": 450,
+    "fitness": 1640
+  }
+}

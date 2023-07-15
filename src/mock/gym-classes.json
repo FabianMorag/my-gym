@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Zumba",
+    "img": "https://images.pexels.com/photos/3775566/pexels-photo-3775566.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "price": "10"
+  },
+  {
+    "name": "Boxing",
+    "img": "https://images.pexels.com/photos/4753923/pexels-photo-4753923.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "price": "12"
+  },
+  {
+    "name": "Taekwondo",
+    "img": "https://images.pexels.com/photos/7045459/pexels-photo-7045459.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "price": "13"
+  },
+  {
+    "name": "BodyCombat",
+    "img": "https://images.squarespace-cdn.com/content/v1/5ad673a73917ee3cab1fa391/1529336515486-RT2YGPGNQVNXWRD1CX30/DSC_0786.jpg",
+    "price": "8"
+  },
+  {
+    "name": "Yoga",
+    "img": "https://images.pexels.com/photos/917653/pexels-photo-917653.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "price": "5"
+  },
+  {
+    "name": "Crossfit",
+    "img": "https://images.pexels.com/photos/3253501/pexels-photo-3253501.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "price": "5"
+  }
+]

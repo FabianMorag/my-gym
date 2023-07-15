@@ -1,0 +1,25 @@
+---
+const { name, img } = Astro.props;
+---
+
+<a class="transition-all hover:scale-105" href="/pricing">
+  <div class="w-full aspect-square bg-[#D1A133] rounded-md overflow-hidden">
+    <div class="h-5/6">
+      <img
+        src={img}
+        alt={"Image of people doing " + name}
+        class="h-full object-cover"
+      />
+    </div>
+    <div class="absolute">
+      <p
+        class="absolute bg-gradient-to-r from-black to-transparent bottom-4 py-2 px-16"
+      >
+        JOIN
+      </p>
+    </div>
+    <div class="h-1/6 flex items-center justify-center">
+      <p>{name}</p>
+    </div>
+  </div>
+</a>

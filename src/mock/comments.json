@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Dwayne Johnson",
+    "img": "https://m.media-amazon.com/images/M/MV5BMTkyNDQ3NzAxM15BMl5BanBnXkFtZTgwODIwMTQ0NTE@._V1_FMjpg_UX1000_.jpg",
+    "date": "21-03-2022",
+    "comment": "Personal trainers are very dedicated to the work they do. They have great experience and a lot of knowledge about body building."
+  },
+  {
+    "name": "Margot Robbie",
+    "img": "https://cdn.britannica.com/32/201632-050-66971649/actress-Margot-Robbie-Australian-2018.jpg",
+    "date": "12-11-2023",
+    "comment": "They have good infraestucture, a lot of different machines and a lot of different technologies."
+  },
+  {
+    "name": "Michael Jordan",
+    "img": "https://www.basketballnetwork.net/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTkyMDA0NjYyOTEwNTI2OTE5/michael-jordan.jpg",
+    "date": "30-03-2023",
+    "comment": "Very nice recepcionist."
+  },
+  {
+    "name": "Elizabeth Olsen",
+    "img": "https://m.media-amazon.com/images/M/MV5BMjEzMjA0ODk1OF5BMl5BanBnXkFtZTcwMTA4ODM3OQ@@._V1_.jpg",
+    "date": "30-03-2023",
+    "comment": "Comfortable place and very profesional trainer."
+  },
+  {
+    "name": "Pedro Pascal",
+    "img": "https://media1.popsugar-assets.com/files/thumbor/WxIL_RBAKVdi2ShtysFzeIETIKE/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2019/12/27/962/n/1922283/8df136e294c0430c_GettyImages-1166564621/i/pictures-pedro-pascal-who-plays-mandalorian.jpg",
+    "date": "07-08-2023",
+    "comment": "Very profesional staff, the gym is clean and it looks awesome."
+  }
+]
