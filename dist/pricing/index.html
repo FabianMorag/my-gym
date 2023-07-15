@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="/_astro/about.ff2e5d30.css" /><main>
+  <section class="px-12 py-8 bg-[#04040C] w-screen fixed top-0">
+    <div class="text-white max-w-7xl m-auto flex justify-between">
+      <a href="/">
+        <img class="h-6 rotate-180" src="/right-arrow.svg" alt="right-arrow">
+      </a>
+    </div>
+  </section>
+
+  <section class="px-12 pt-32 pb-12 lg:max-w-7xl lg:gap-6 lg:m-auto lg:flex">
+    <div class="flex flex-col gap-12 m-auto lg:w-2/3">
+      <div>
+        <h3 class="mb-4 font-semibold text-gray-900">Choose your plan</h3>
+        <div class="w-full grid place-items-center">
+          <div class="hidden w-full text-center">
+            <p class="font-bold text-2xl md:text-left">Thank you!</p>
+            <p class="text-lg md:text-left">We will contact you very soon</p>
+          </div>
+          <form class="w-full">
+            <div class="md:flex md:gap-4">
+              <div class="w-full">
+                <label for="first-name" class="block mb-2 text-sm font-medium text-gray-900">Your first name</label>
+                <input type="text" id="first-name" class="bg-gray-50 mb-4 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-yellow-300 focus:border-yellow-300 block w-full p-2.5" placeholder="Name" required>
+              </div>
+              <div class="w-full">
+                <label for="last-name" class="block mb-2 text-sm font-medium text-gray-900">Your last name</label>
+                <input type="text" id="last-name" class="bg-gray-50 mb-4 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-yellow-300 focus:border-yellow-300 block w-full p-2.5" placeholder="Last name" required>
+              </div>
+            </div>
+            <label for="email-address " class="block mb-2 text-sm font-medium text-gray-900">Your Email</label>
+            <input type="text" id="email-address" class="bg-gray-50 mb-4 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-yellow-300 focus:border-yellow-300 block w-full p-2.5" placeholder="name@example.com" required>
+            <label for="address" class="block mb-2 text-sm font-medium text-gray-900">Your Address</label>
+            <input type="text" id="address" class="bg-gray-50 mb-4 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-yellow-300 focus:border-yellow-300 block w-full p-2.5" placeholder="Example street 123" required>
+          </form>
+        </div>
+      </div>
+      <div>
+        <h3 class="mb-4 font-semibold text-gray-900">Choose your plan</h3>
+        <ul class="items-center w-full text-sm font-medium mb-4 text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex">
+          <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
+            <div class="flex items-center pl-3">
+              <input id="personal-plan-selector" type="radio" value="" name="list-radio1" class="prices w-4 h-4 text-yellow-400 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2">
+              <label for="personal-plan-selector" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"><span>Personal</span>
+              </label>
+            </div>
+          </li>
+          <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
+            <div class="flex items-center pl-3">
+              <input id="enterprise-plan-selector" type="radio" value="" name="list-radio1" class="prices w-4 h-4 text-yellow-400 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2">
+              <label for="enterprise-plan-selector" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"><span>Enterprise</span></label>
+            </div>
+          </li>
+        </ul>
+
+        <div id="enterprise-name" class="w-full hidden">
+          <label for=" enterprise-name" class="block mb-2 text-sm font-medium text-gray-900">Your Enterprise*</label>
+          <input type="text" id="enterprise-name" class="bg-gray-50 mb-4 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-yellow-300 focus:border-yellow-300 block w-full p-2.5" placeholder="Enterprise name" required>
+        </div>
+
+        <ul class="items-center w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex">
+          <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+            <div class="flex items-center pl-3">
+              <input id=" starter-plan-selector" type="radio" value="" name="list-radio2" class="prices w-4 h-4 text-yellow-400 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2">
+              <label for="starter-plan-selector" class="w-full py-3 mx-3 text-sm font-medium text-gray-900 flex justify-between"><span>Starter</span>
+                <span class="text-gray-500"></span>
+              </label>
+            </div>
+          </li>
+          <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+            <div class="flex items-center pl-3">
+              <input id=" advanced-plan-selector" type="radio" value="" name="list-radio2" class="prices w-4 h-4 text-yellow-400 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2">
+              <label for="advanced-plan-selector" class="w-full py-3 mx-3 text-sm font-medium text-gray-900 flex justify-between"><span>Advanced</span>
+                <span class="text-gray-500"></span></label>
+            </div>
+          </li>
+          <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+            <div class="flex items-center pl-3">
+              <input id=" fitness-plan-selector" type="radio" value="" name="list-radio2" class="prices w-4 h-4 text-yellow-400 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2">
+              <label for="fitness-plan-selector" class="w-full py-3 mx-3 text-sm font-medium text-gray-900 flex justify-between"><span>Fitness</span>
+                <span class="text-gray-500"></span></label>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="mb-4 font-semibold text-gray-900">Aditional Classes</h3>
+        <ul class="w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg">
+          <li class="w-full border-b border-gray-200 rounded-t-lg">
+                <div class="flex items-center pl-3">
+                  <input id="Zumba-checkbox" type="checkbox" value="" name="list-radio3" class="prices w-4 h-4 text-yellow-400 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2">
+                  <label for="Zumba-checkbox" class="w-full py-3 mx-3 text-sm font-medium text-gray-900 dark:text-gray-300 flex justify-between">
+                    <span>Zumba</span>
+                    <span class="text-gray-500">$10</span>
+                  </label>
+                </div>
+              </li><li class="w-full border-b border-gray-200 rounded-t-lg">
+                <div class="flex items-center pl-3">
+                  <input id="Boxing-checkbox" type="checkbox" value="" name="list-radio3" class="prices w-4 h-4 text-yellow-400 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2">
+                  <label for="Boxing-checkbox" class="w-full py-3 mx-3 text-sm font-medium text-gray-900 dark:text-gray-300 flex justify-between">
+                    <span>Boxing</span>
+                    <span class="text-gray-500">$12</span>
+                  </label>
+                </div>
+              </li><li class="w-full border-b border-gray-200 rounded-t-lg">
+                <div class="flex items-center pl-3">
+                  <input id="Taekwondo-checkbox" type="checkbox" value="" name="list-radio3" class="prices w-4 h-4 text-yellow-400 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2">
+                  <label for="Taekwondo-checkbox" class="w-full py-3 mx-3 text-sm font-medium text-gray-900 dark:text-gray-300 flex justify-between">
+                    <span>Taekwondo</span>
+                    <span class="text-gray-500">$13</span>
+                  </label>
+                </div>
+              </li><li class="w-full border-b border-gray-200 rounded-t-lg">
+                <div class="flex items-center pl-3">
+                  <input id="BodyCombat-checkbox" type="checkbox" value="" name="list-radio3" class="prices w-4 h-4 text-yellow-400 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2">
+                  <label for="BodyCombat-checkbox" class="w-full py-3 mx-3 text-sm font-medium text-gray-900 dark:text-gray-300 flex justify-between">
+                    <span>BodyCombat</span>
+                    <span class="text-gray-500">$8</span>
+                  </label>
+                </div>
+              </li><li class="w-full border-b border-gray-200 rounded-t-lg">
+                <div class="flex items-center pl-3">
+                  <input id="Yoga-checkbox" type="checkbox" value="" name="list-radio3" class="prices w-4 h-4 text-yellow-400 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2">
+                  <label for="Yoga-checkbox" class="w-full py-3 mx-3 text-sm font-medium text-gray-900 dark:text-gray-300 flex justify-between">
+                    <span>Yoga</span>
+                    <span class="text-gray-500">$5</span>
+                  </label>
+                </div>
+              </li><li class="w-full border-b border-gray-200 rounded-t-lg">
+                <div class="flex items-center pl-3">
+                  <input id="Crossfit-checkbox" type="checkbox" value="" name="list-radio3" class="prices w-4 h-4 text-yellow-400 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2">
+                  <label for="Crossfit-checkbox" class="w-full py-3 mx-3 text-sm font-medium text-gray-900 dark:text-gray-300 flex justify-between">
+                    <span>Crossfit</span>
+                    <span class="text-gray-500">$5</span>
+                  </label>
+                </div>
+              </li>
+        </ul>
+
+        <div class="pt-12 pb-32 flex justify-end">
+          <button type="button" class="py-3 px-5 items-center w-full bg-sky-600 text-sm font-medium text-white border border-gray-200 rounded-lg flex justify-between lg:w-auto lg:gap-2">
+            <span>Start from August 1st</span>
+            <img class="h-5" src="/right-arrow.svg" alt="right-arrow">
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="hidden w-1/3 p-6 bg-gray-50 max-w-7xl lg:block">
+      <h2 class="text-lg mb-4 font-semibold">Your selection</h2>
+      <div id="items" class="border-b-2 border-gray-200"></div>
+      <div class="flex justify-between">
+        <h3 class="text-lg mb-4 font-semibold">Payment</h3>
+        <span id="payment" class="text-lg font-bold">$0</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="px-12 py-8 bg-gray-100 w-screen fixed bottom-0 lg:hidden">
+    <div class="max-w-7xl m-auto flex justify-between">
+      <h3 class="text-lg mb-4 font-semibold">Payment</h3>
+      <span id="payment" class="text-lg font-bold">$0</span>
+    </div>
+  </section>
+</main>
+
+<script type="module">
+const defaultPlans = await fetch("src/mock/plans.json").then((res) =>
+  res.json()
+);
+const enterprisePlanInput = Array.from(
+  document.getElementsByName("list-radio1")
+);
+const planInput = Array.from(document.getElementsByName("list-radio2"));
+const enterpriseNameInput = document.querySelector("div#enterprise-name");
+const priceValues = Array.from(document.querySelectorAll(".prices"));
+
+enterprisePlanInput.map((element) => {
+  element.addEventListener("change", (e) => {
+    if (e.target.id === "enterprise-plan-selector") {
+      enterpriseNameInput.classList.remove("hidden");
+      planInput[0].nextElementSibling.lastElementChild.textContent =
+        "$" + defaultPlans["enterprise"]["starter"];
+      planInput[1].nextElementSibling.lastElementChild.textContent =
+        "$" + defaultPlans["enterprise"]["advanced"];
+      planInput[2].nextElementSibling.lastElementChild.textContent =
+        "$" + defaultPlans["enterprise"]["fitness"];
+    } else {
+      enterpriseNameInput.classList.add("hidden");
+      planInput[0].nextElementSibling.lastElementChild.textContent =
+        "$" + defaultPlans["personal"]["starter"];
+      planInput[1].nextElementSibling.lastElementChild.textContent =
+        "$" + defaultPlans["personal"]["advanced"];
+      planInput[2].nextElementSibling.lastElementChild.textContent =
+        "$" + defaultPlans["personal"]["fitness"];
+    }
+  });
+});
+
+priceValues.map((element) =>
+  element.addEventListener("change", (e) => {
+    const checked = Array.from(document.querySelectorAll(".prices:checked"));
+    const listedItems = document.querySelector("#items");
+    const elementPrices = checked.map((i) => {
+      return {
+        id: i.nextElementSibling.firstElementChild.textContent,
+        price:
+          parseInt(
+            i.nextElementSibling.lastElementChild?.textContent.replace(
+              "$",
+              ""
+            )
+          ) || 0,
+      };
+    });
+    const prices = elementPrices.map((i) => i.price);
+    const totalPrice = prices.reduce((a, b) => a + b);
+
+    document
+      .querySelectorAll("#payment")
+      .forEach((e) => (e.textContent = "$" + totalPrice));
+
+    const listOfPurchase = elementPrices.map((e) => {
+      const listItem =
+        '<div class="flex justify-between"><h3 class="text-lg mb-4 font-normal">' +
+        e.id +
+        "</h3>";
+      const listItemPrice = e.price
+        ? '<span class="text-lg font-semibold text-gray-500">$' +
+        e.price +
+        "</span></div>"
+        : "</div>";
+
+      return listItem + listItemPrice;
+    });
+    listedItems.innerHTML = listOfPurchase.join("");
+  })
+);
+</script>
