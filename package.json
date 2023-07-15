@@ -1,5 +1,5 @@
 {
-  "name": "gymnation-v1",
+  "name": "my-gym",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -16,6 +16,7 @@
     "tailwindcss": "^3.3.2"
   },
   "devDependencies": {
+    "gh-pages": "5.0.0",
     "standard": "17.0.0"
   },
   "eslintConfig": {
