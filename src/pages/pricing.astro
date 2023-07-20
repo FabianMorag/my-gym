@@ -1,5 +1,6 @@
 ---
 import gymClasses from "../mock/gym-classes.json";
+import plans from "../mock/plans.json";
 
 const months = [
   "January",
@@ -141,13 +142,12 @@ let month = months[d.getMonth() + 1];
 
         <div id="enterprise-name" class="w-full hidden">
           <label
-            for=" enterprise-name"
+            for="enterprise-name"
             class="block mb-2 text-sm font-medium text-gray-900"
             >Your Enterprise*</label
           >
           <input
             type="text"
-            id="enterprise-name"
             class="bg-gray-50 mb-4 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-yellow-300 focus:border-yellow-300 block w-full p-2.5"
             placeholder="Enterprise name"
             required
@@ -160,7 +160,7 @@ let month = months[d.getMonth() + 1];
           <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
             <div class="flex items-center pl-3">
               <input
-                id=" starter-plan-selector"
+                id="starter-plan-selector"
                 type="radio"
                 value=""
                 name="list-radio2"
@@ -177,7 +177,7 @@ let month = months[d.getMonth() + 1];
           <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
             <div class="flex items-center pl-3">
               <input
-                id=" advanced-plan-selector"
+                id="advanced-plan-selector"
                 type="radio"
                 value=""
                 name="list-radio2"
@@ -194,7 +194,7 @@ let month = months[d.getMonth() + 1];
           <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
             <div class="flex items-center pl-3">
               <input
-                id=" fitness-plan-selector"
+                id="fitness-plan-selector"
                 type="radio"
                 value=""
                 name="list-radio2"
@@ -243,9 +243,9 @@ let month = months[d.getMonth() + 1];
         <div class="pt-12 pb-32 flex justify-end">
           <button
             type="button"
-            class="py-3 px-5 items-center w-full bg-sky-600 text-sm font-medium text-white border border-gray-200 rounded-lg flex justify-between lg:w-auto lg:gap-2"
+            class="py-3 px-5 items-center w-full bg-sky-600 text-sm font-medium text-white border border-gray-200 rounded-lg flex justify-between hover:bg-sky-500 lg:w-auto lg:gap-2"
           >
-            <span>Start from {month} 1st</span>
+            Start from {month} 1st
             <img class="h-5" src="/right-arrow.svg" alt="right-arrow" />
           </button>
         </div>
@@ -253,11 +253,13 @@ let month = months[d.getMonth() + 1];
     </div>
 
     <div class="hidden w-1/3 p-6 bg-gray-50 max-w-7xl lg:block">
-      <h2 class="text-lg mb-4 font-semibold">Your selection</h2>
-      <div id="items" class="border-b-2 border-gray-200"></div>
-      <div class="flex justify-between">
-        <h3 class="text-lg mb-4 font-semibold">Payment</h3>
-        <span id="payment" class="text-lg font-bold">$0</span>
+      <div class="sticky top-32">
+        <h2 class="text-lg mb-4 font-semibold">Your selection</h2>
+        <div id="items" class="border-b-2 border-gray-200"></div>
+        <div class="flex justify-between">
+          <h3 class="text-lg mb-4 font-semibold">Payment</h3>
+          <span id="payment" class="text-lg font-bold">$0</span>
+        </div>
       </div>
     </div>
   </section>
@@ -270,76 +272,73 @@ let month = months[d.getMonth() + 1];
   </section>
 </main>
 
-<script type="module">
-const defaultPlans = await fetch("src/mock/plans.json").then((res) =>
-  res.json()
-);
-const enterprisePlanInput = Array.from(
-  document.getElementsByName("list-radio1")
-);
-const planInput = Array.from(document.getElementsByName("list-radio2"));
-const enterpriseNameInput = document.querySelector("div#enterprise-name");
-const priceValues = Array.from(document.querySelectorAll(".prices"));
+<script>
+  import defaultPlans from "../mock/plans.json";
 
-enterprisePlanInput.map((element) => {
-  element.addEventListener("change", (e) => {
-    if (e.target.id === "enterprise-plan-selector") {
-      enterpriseNameInput.classList.remove("hidden");
-      planInput[0].nextElementSibling.lastElementChild.textContent =
-        "$" + defaultPlans["enterprise"]["starter"];
-      planInput[1].nextElementSibling.lastElementChild.textContent =
-        "$" + defaultPlans["enterprise"]["advanced"];
-      planInput[2].nextElementSibling.lastElementChild.textContent =
-        "$" + defaultPlans["enterprise"]["fitness"];
-    } else {
-      enterpriseNameInput.classList.add("hidden");
-      planInput[0].nextElementSibling.lastElementChild.textContent =
-        "$" + defaultPlans["personal"]["starter"];
-      planInput[1].nextElementSibling.lastElementChild.textContent =
-        "$" + defaultPlans["personal"]["advanced"];
-      planInput[2].nextElementSibling.lastElementChild.textContent =
-        "$" + defaultPlans["personal"]["fitness"];
-    }
+  const enterprisePlanInput = [...document.getElementsByName("list-radio1")];
+  const planInput = [...document.getElementsByName("list-radio2")];
+  const enterpriseNameInput = document.querySelector("div#enterprise-name");
+  const priceValues = [...document.querySelectorAll(".prices")];
+
+  enterprisePlanInput.map((element) => {
+    element.addEventListener("change", (e) => {
+      if (e.target.id === "enterprise-plan-selector") {
+        enterpriseNameInput.classList.remove("hidden");
+        planInput[0].nextElementSibling.lastElementChild.textContent =
+          "$" + defaultPlans["enterprise"]["starter"];
+        planInput[1].nextElementSibling.lastElementChild.textContent =
+          "$" + defaultPlans["enterprise"]["advanced"];
+        planInput[2].nextElementSibling.lastElementChild.textContent =
+          "$" + defaultPlans["enterprise"]["fitness"];
+      } else {
+        enterpriseNameInput.classList.add("hidden");
+        planInput[0].nextElementSibling.lastElementChild.textContent =
+          "$" + defaultPlans["personal"]["starter"];
+        planInput[1].nextElementSibling.lastElementChild.textContent =
+          "$" + defaultPlans["personal"]["advanced"];
+        planInput[2].nextElementSibling.lastElementChild.textContent =
+          "$" + defaultPlans["personal"]["fitness"];
+      }
+    });
   });
-});
 
-priceValues.map((element) =>
-  element.addEventListener("change", (e) => {
-    const checked = Array.from(document.querySelectorAll(".prices:checked"));
-    const listedItems = document.querySelector("#items");
-    const elementPrices = checked.map((i) => {
-      return {
-        id: i.nextElementSibling.firstElementChild.textContent,
-        price:
-          parseInt(
-            i.nextElementSibling.lastElementChild?.textContent.replace(
-              "$",
-              ""
-            )
-          ) || 0,
-      };
-    });
-    const prices = elementPrices.map((i) => i.price);
-    const totalPrice = prices.reduce((a, b) => a + b);
+  priceValues.map((element) =>
+    element.addEventListener("change", (e) => {
+      const checked = [...document.querySelectorAll(".prices:checked")];
+      const listedItems = document.querySelector("#items");
+      const elementPrices = checked.map((i) => {
+        return {
+          id: i.nextElementSibling.firstElementChild.textContent,
+          price:
+            parseInt(
+              i.nextElementSibling.lastElementChild?.textContent.replace(
+                "$",
+                ""
+              )
+            ) || 0,
+        };
+      });
+      const prices = elementPrices.map((i) => i.price);
+      const totalPrice = prices.reduce((a, b) => a + b);
 
-    document
-      .querySelectorAll("#payment")
-      .forEach((e) => (e.textContent = "$" + totalPrice));
+      document
+        .querySelectorAll("#payment")
+        .forEach((e) => (e.textContent = "$" + totalPrice));
 
-    const listOfPurchase = elementPrices.map((e) => {
-      const listItem =
-        '<div class="flex justify-between"><h3 class="text-lg mb-4 font-normal">' +
-        e.id +
-        "</h3>";
-      const listItemPrice = e.price
-        ? '<span class="text-lg font-semibold text-gray-500">$' +
-        e.price +
-        "</span></div>"
-        : "</div>";
+      const listOfPurchase = elementPrices.map((e) => {
+        const listItem =
+          '<div class="flex justify-between"><h3 class="text-lg mb-4 font-normal">' +
+          e.id +
+          "</h3>";
+        const listItemPrice = e.price
+          ? '<span class="text-lg font-semibold text-gray-500">$' +
+            e.price +
+            "</span></div>"
+          : "</div>";
 
-      return listItem + listItemPrice;
-    });
-    listedItems.innerHTML = listOfPurchase.join("");
-  })
-);
+        return listItem + listItemPrice;
+      });
+      listedItems.innerHTML = listOfPurchase.join("");
+    })
+  );
 </script>
