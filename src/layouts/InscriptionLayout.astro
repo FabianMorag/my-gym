@@ -1,0 +1,61 @@
+---
+---
+
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Inscription</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<section class="px-12 py-8 bg-[#1e1e2c] w-screen fixed top-0">
+			<div class="text-white max-w-7xl m-auto flex justify-between">
+				<a href="/">
+					<svg
+						class="h-6 rotate-180"
+						version="1.1"
+						id="Capa_1"
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+						viewBox="0 0 31.143 31.143"
+						xml:space="preserve"
+					>
+						<g>
+							<g id="c100_arrow">
+								<path
+									fill="currentColor"
+									d="M0,15.571c0.001,1.702,1.383,3.081,3.085,3.083l17.528-0.002l-4.738,4.739c-1.283,1.284-1.349,3.301-0.145,4.507
+				c1.205,1.201,3.222,1.138,4.507-0.146l9.896-9.898c1.287-1.283,1.352-3.301,0.146-4.506c-0.033-0.029-0.068-0.051-0.1-0.08
+				c-0.041-0.043-0.07-0.094-0.113-0.139l-9.764-9.762c-1.268-1.266-3.27-1.316-4.474-0.111c-1.205,1.205-1.153,3.208,0.111,4.476
+				l4.755,4.754H3.085C1.381,12.485,0,13.865,0,15.571z"
+								></path>
+							</g>
+							<g id="Capa_1_46_"> </g>
+						</g>
+					</svg>
+				</a>
+			</div>
+		</section>
+		<slot />
+	</body>
+	<script src="../../node_modules/flowbite/dist/flowbite.min.js"></script>
+</html>
+
+<style>
+	* {
+		font-family: "Poppins", sans-serif;
+	}
+	:root {
+		font-size: 16px;
+	}
+</style>

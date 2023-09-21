@@ -1,4 +1,5 @@
 ---
+import InscriptionLayout from "../layouts/InscriptionLayout.astro";
 import gymClasses from "../mock/gym-classes.json";
 
 const months = [
@@ -20,300 +21,279 @@ const date = new Date();
 let month = months[date.getMonth() + 1];
 ---
 
-<main>
-  <section class="px-12 py-8 bg-[#1e1e2c] w-screen fixed top-0">
-    <div class="text-white max-w-7xl m-auto flex justify-between">
-      <a href="/">
-        <svg
-          class="h-6 rotate-180"
-          version="1.1"
-          id="Capa_1"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          viewBox="0 0 31.143 31.143"
-          xml:space="preserve"
-        >
-          <g>
-            <g id="c100_arrow">
-              <path
-                fill="currentColor"
-                d="M0,15.571c0.001,1.702,1.383,3.081,3.085,3.083l17.528-0.002l-4.738,4.739c-1.283,1.284-1.349,3.301-0.145,4.507
-			c1.205,1.201,3.222,1.138,4.507-0.146l9.896-9.898c1.287-1.283,1.352-3.301,0.146-4.506c-0.033-0.029-0.068-0.051-0.1-0.08
-			c-0.041-0.043-0.07-0.094-0.113-0.139l-9.764-9.762c-1.268-1.266-3.27-1.316-4.474-0.111c-1.205,1.205-1.153,3.208,0.111,4.476
-			l4.755,4.754H3.085C1.381,12.485,0,13.865,0,15.571z"
-              ></path>
-            </g>
-            <g id="Capa_1_46_"> </g>
-          </g>
-        </svg>
-      </a>
-    </div>
-  </section>
-
-  <section class="px-12 pt-32 pb-12 lg:max-w-7xl lg:gap-6 lg:m-auto lg:flex">
-    <div class="flex flex-col gap-8 m-auto lg:w-2/3">
-      <div>
-        <h3 class="mb-4 font-semibold text-3xl text-gray-900 lg:text-xl">
-          Complete your information
-        </h3>
-        <div class="w-full grid place-items-center">
-          <form class="w-full">
-            <div class="lg:flex lg:gap-4">
-              <div class="w-full">
-                <label
-                  for="first-name"
-                  class="block mb-2 text-xl font-medium text-gray-900 lg:text-base"
-                  >First name</label
-                >
-                <input
-                  type="text"
-                  id="first-name"
-                  class="bg-gray-50 mb-4 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-yellow-300 focus:border-yellow-300 block w-full p-2.5 lg:text-base"
-                  placeholder="Name"
-                  required
-                />
-              </div>
-              <div class="w-full">
-                <label
-                  for="last-name"
-                  class="block mb-2 text-xl font-medium text-gray-900 lg:text-base"
-                  >Last name</label
-                >
-                <input
-                  type="text"
-                  id="last-name"
-                  class="bg-gray-50 mb-4 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-yellow-300 focus:border-yellow-300 block w-full p-2.5 lg:text-base"
-                  placeholder="Last name"
-                  required
-                />
-              </div>
-            </div>
-            <label
-              for="email-address "
-              class="block mb-2 text-xl font-medium text-gray-900 lg:text-base"
-              >Email</label
-            >
-            <input
-              type="text"
-              id="email-address"
-              class="bg-gray-50 mb-4 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-yellow-300 focus:border-yellow-300 block w-full p-2.5 lg:text-base"
-              placeholder="name@example.com"
-              required
-            />
-            <label
-              for="address"
-              class="block mb-2 text-xl font-medium text-gray-900 lg:text-base"
-              >Address</label
-            >
-            <input
-              type="text"
-              id="address"
-              class="bg-gray-50 mb-4 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-yellow-300 focus:border-yellow-300 block w-full p-2.5 lg:text-base"
-              placeholder="Example street 123"
-              required
-            />
-          </form>
-        </div>
-      </div>
-      <div>
-        <h3 class="mb-4 font-semibold text-xl text-gray-900 lg:text-xl">
-          Choose your plan
-        </h3>
-        <ul
-          class="items-center w-full text-xl font-medium mb-4 text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex lg:text-base"
-        >
-          <li
-            class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600"
-          >
-            <div class="flex items-center pl-3">
-              <input
-                id="personal-plan-selector"
-                type="radio"
-                value=""
-                name="list-radio1"
-                class="prices w-4 h-4 text-yellow-400 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
-              />
-              <label
-                for="personal-plan-selector"
-                class="w-full py-4 ml-2 font-medium text-gray-900 dark:text-gray-300"
-                ><span>Personal</span>
-              </label>
-            </div>
-          </li>
-          <li
-            class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600"
-          >
-            <div class="flex items-center pl-3">
-              <input
-                id="enterprise-plan-selector"
-                type="radio"
-                value=""
-                name="list-radio1"
-                class="prices w-4 h-4 text-yellow-400 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
-              />
-              <label
-                for="enterprise-plan-selector"
-                class="w-full py-4 ml-2 font-medium text-gray-900 dark:text-gray-300"
-                ><span>Enterprise</span></label
-              >
-            </div>
-          </li>
-        </ul>
-
-        <div id="enterprise-name" class="w-full hidden">
-          <label
-            for="enterprise-name"
-            class="block mb-2 font-medium text-xl text-gray-900 lg:text-base"
-            >Your Enterprise*</label
-          >
-          <input
-            type="text"
-            class="bg-gray-50 mb-4 border border-gray-300 text-xl text-gray-900 rounded-lg focus:ring-yellow-300 focus:border-yellow-300 block w-full p-2.5 lg:text-base"
-            placeholder="Enterprise name"
-            required
-          />
-        </div>
-
-        <ul
-          class="items-center w-full font-medium text-xl text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex lg:text-base"
-        >
-          <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
-            <div class="flex items-center pl-3">
-              <input
-                id="starter-plan-selector"
-                type="radio"
-                value=""
-                name="list-radio2"
-                class="prices w-4 h-4 text-yellow-400 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
-              />
-              <label
-                for="starter-plan-selector"
-                class="w-full py-4 mx-3 font-medium text-gray-900 flex justify-between"
-                ><span>Starter</span>
-                <span class="text-gray-500"></span>
-              </label>
-            </div>
-          </li>
-          <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
-            <div class="flex items-center pl-3">
-              <input
-                id="advanced-plan-selector"
-                type="radio"
-                value=""
-                name="list-radio2"
-                class="prices w-4 h-4 text-yellow-400 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
-              />
-              <label
-                for="advanced-plan-selector"
-                class="w-full py-4 mx-3 font-medium text-gray-900 flex justify-between"
-                ><span>Advanced</span>
-                <span class="text-gray-500"></span></label
-              >
-            </div>
-          </li>
-          <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
-            <div class="flex items-center pl-3">
-              <input
-                id="fitness-plan-selector"
-                type="radio"
-                value=""
-                name="list-radio2"
-                class="prices w-4 h-4 text-yellow-400 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
-              />
-              <label
-                for="fitness-plan-selector"
-                class="w-full py-4 mx-3 font-medium text-gray-900 flex justify-between"
-                ><span>Fitness</span>
-                <span class="text-gray-500"></span></label
-              >
-            </div>
-          </li>
-        </ul>
-      </div>
-
-      <div>
-        <h3 class="mb-4 font-semibold text-3xl text-gray-900 lg:text-xl">
-          Aditional Classes
-        </h3>
-        <ul
-          class="w-full text-xl font-medium text-gray-900 bg-white border border-gray-200 rounded-lg lg:text-base"
-        >
-          {
-            gymClasses.map((gymClass) => (
-              <li class="w-full border-b border-gray-200 rounded-t-lg">
-                <div class="flex items-center pl-3">
-                  <input
-                    id={gymClass["name"] + "-checkbox"}
-                    type="checkbox"
-                    value=""
-                    name="list-radio3"
-                    class="prices w-4 h-4 text-yellow-400 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
-                  />
+<InscriptionLayout>
+  <main>
+    <section class="px-12 pt-32 pb-12 lg:max-w-7xl lg:gap-6 lg:m-auto lg:flex">
+      <div class="flex flex-col gap-8 m-auto lg:w-2/3">
+        <div>
+          <h3 class="mb-4 font-semibold text-3xl text-gray-900 lg:text-xl">
+            Complete your information
+          </h3>
+          <div class="w-full grid place-items-center">
+            <form class="w-full">
+              <div class="lg:flex lg:gap-4">
+                <div class="w-full">
                   <label
-                    for={gymClass["name"] + "-checkbox"}
-                    class="w-full py-4 mx-3  text-gray-900 dark:text-gray-300 flex justify-between lg:py-3"
+                    for="first-name"
+                    class="block mb-2 text-xl font-medium text-gray-900 lg:text-base"
+                    >First name</label
                   >
-                    <span>{gymClass["name"]}</span>
-                    <span class="text-gray-500">${gymClass["price"]}</span>
-                  </label>
+                  <input
+                    type="text"
+                    id="first-name"
+                    class="bg-gray-50 mb-4 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-yellow-300 focus:border-yellow-300 block w-full p-2.5 lg:text-base"
+                    placeholder="Name"
+                    required
+                  />
                 </div>
-              </li>
-            ))
-          }
-        </ul>
-
-        <div class="pt-12 pb-32 text-xl flex justify-end">
-          <button
-            type="button"
-            class="py-3 px-5 items-center w-full bg-sky-600 font-medium text-white border border-gray-200 rounded-lg flex justify-between hover:bg-sky-500 lg:w-auto lg:gap-2 lg:text-base"
+                <div class="w-full">
+                  <label
+                    for="last-name"
+                    class="block mb-2 text-xl font-medium text-gray-900 lg:text-base"
+                    >Last name</label
+                  >
+                  <input
+                    type="text"
+                    id="last-name"
+                    class="bg-gray-50 mb-4 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-yellow-300 focus:border-yellow-300 block w-full p-2.5 lg:text-base"
+                    placeholder="Last name"
+                    required
+                  />
+                </div>
+              </div>
+              <label
+                for="email-address "
+                class="block mb-2 text-xl font-medium text-gray-900 lg:text-base"
+                >Email</label
+              >
+              <input
+                type="text"
+                id="email-address"
+                class="bg-gray-50 mb-4 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-yellow-300 focus:border-yellow-300 block w-full p-2.5 lg:text-base"
+                placeholder="name@example.com"
+                required
+              />
+              <label
+                for="address"
+                class="block mb-2 text-xl font-medium text-gray-900 lg:text-base"
+                >Address</label
+              >
+              <input
+                type="text"
+                id="address"
+                class="bg-gray-50 mb-4 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-yellow-300 focus:border-yellow-300 block w-full p-2.5 lg:text-base"
+                placeholder="Example street 123"
+                required
+              />
+            </form>
+          </div>
+        </div>
+        <div>
+          <h3 class="mb-4 font-semibold text-xl text-gray-900 lg:text-xl">
+            Choose your plan
+          </h3>
+          <ul
+            class="items-center w-full text-xl font-medium mb-4 text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex lg:text-base"
           >
-            Start from {month} 1st
-            <svg
-              class="h-6"
-              version="1.1"
-              id="Capa_1"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              viewBox="0 0 31.143 31.143"
-              xml:space="preserve"
+            <li
+              class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600"
             >
-              <g>
-                <g id="c100_arrow">
-                  <path
-                    fill="currentColor"
-                    d="M0,15.571c0.001,1.702,1.383,3.081,3.085,3.083l17.528-0.002l-4.738,4.739c-1.283,1.284-1.349,3.301-0.145,4.507
+              <div class="flex items-center pl-3">
+                <input
+                  id="personal-plan-selector"
+                  type="radio"
+                  value=""
+                  name="list-radio1"
+                  class="prices w-4 h-4 text-yellow-400 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
+                />
+                <label
+                  for="personal-plan-selector"
+                  class="w-full py-4 ml-2 font-medium text-gray-900 dark:text-gray-300"
+                  ><span>Personal</span>
+                </label>
+              </div>
+            </li>
+            <li
+              class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600"
+            >
+              <div class="flex items-center pl-3">
+                <input
+                  id="enterprise-plan-selector"
+                  type="radio"
+                  value=""
+                  name="list-radio1"
+                  class="prices w-4 h-4 text-yellow-400 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
+                />
+                <label
+                  for="enterprise-plan-selector"
+                  class="w-full py-4 ml-2 font-medium text-gray-900 dark:text-gray-300"
+                  ><span>Enterprise</span></label
+                >
+              </div>
+            </li>
+          </ul>
+
+          <div id="enterprise-name" class="w-full hidden">
+            <label
+              for="enterprise-name"
+              class="block mb-2 font-medium text-xl text-gray-900 lg:text-base"
+              >Your Enterprise*</label
+            >
+            <input
+              type="text"
+              class="bg-gray-50 mb-4 border border-gray-300 text-xl text-gray-900 rounded-lg focus:ring-yellow-300 focus:border-yellow-300 block w-full p-2.5 lg:text-base"
+              placeholder="Enterprise name"
+              required
+            />
+          </div>
+
+          <ul
+            class="items-center w-full font-medium text-xl text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex lg:text-base"
+          >
+            <li
+              class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r"
+            >
+              <div class="flex items-center pl-3">
+                <input
+                  id="starter-plan-selector"
+                  type="radio"
+                  value=""
+                  name="list-radio2"
+                  class="prices w-4 h-4 text-yellow-400 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
+                />
+                <label
+                  for="starter-plan-selector"
+                  class="w-full py-4 mx-3 font-medium text-gray-900 flex justify-between"
+                  ><span>Starter</span>
+                  <span class="text-gray-500"></span>
+                </label>
+              </div>
+            </li>
+            <li
+              class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r"
+            >
+              <div class="flex items-center pl-3">
+                <input
+                  id="advanced-plan-selector"
+                  type="radio"
+                  value=""
+                  name="list-radio2"
+                  class="prices w-4 h-4 text-yellow-400 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
+                />
+                <label
+                  for="advanced-plan-selector"
+                  class="w-full py-4 mx-3 font-medium text-gray-900 flex justify-between"
+                  ><span>Advanced</span>
+                  <span class="text-gray-500"></span></label
+                >
+              </div>
+            </li>
+            <li
+              class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r"
+            >
+              <div class="flex items-center pl-3">
+                <input
+                  id="fitness-plan-selector"
+                  type="radio"
+                  value=""
+                  name="list-radio2"
+                  class="prices w-4 h-4 text-yellow-400 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
+                />
+                <label
+                  for="fitness-plan-selector"
+                  class="w-full py-4 mx-3 font-medium text-gray-900 flex justify-between"
+                  ><span>Fitness</span>
+                  <span class="text-gray-500"></span></label
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="mb-4 font-semibold text-3xl text-gray-900 lg:text-xl">
+            Aditional Classes
+          </h3>
+          <ul
+            class="w-full text-xl font-medium text-gray-900 bg-white border border-gray-200 rounded-lg lg:text-base"
+          >
+            {
+              gymClasses.map((gymClass) => (
+                <li class="w-full border-b border-gray-200 rounded-t-lg">
+                  <div class="flex items-center pl-3">
+                    <input
+                      id={gymClass["name"] + "-checkbox"}
+                      type="checkbox"
+                      value=""
+                      name="list-radio3"
+                      class="prices w-4 h-4 text-yellow-400 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
+                    />
+                    <label
+                      for={gymClass["name"] + "-checkbox"}
+                      class="w-full py-4 mx-3  text-gray-900 dark:text-gray-300 flex justify-between lg:py-3"
+                    >
+                      <span>{gymClass["name"]}</span>
+                      <span class="text-gray-500">${gymClass["price"]}</span>
+                    </label>
+                  </div>
+                </li>
+              ))
+            }
+          </ul>
+
+          <div class="pt-12 pb-32 text-xl flex justify-end">
+            <button
+              type="button"
+              class="py-3 px-5 items-center w-full bg-sky-600 font-medium text-white border border-gray-200 rounded-lg flex justify-between hover:bg-sky-500 lg:w-auto lg:gap-2 lg:text-base"
+            >
+              Start from {month} 1st
+              <svg
+                class="h-6"
+                version="1.1"
+                id="Capa_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 31.143 31.143"
+                xml:space="preserve"
+              >
+                <g>
+                  <g id="c100_arrow">
+                    <path
+                      fill="currentColor"
+                      d="M0,15.571c0.001,1.702,1.383,3.081,3.085,3.083l17.528-0.002l-4.738,4.739c-1.283,1.284-1.349,3.301-0.145,4.507
 			c1.205,1.201,3.222,1.138,4.507-0.146l9.896-9.898c1.287-1.283,1.352-3.301,0.146-4.506c-0.033-0.029-0.068-0.051-0.1-0.08
 			c-0.041-0.043-0.07-0.094-0.113-0.139l-9.764-9.762c-1.268-1.266-3.27-1.316-4.474-0.111c-1.205,1.205-1.153,3.208,0.111,4.476
 			l4.755,4.754H3.085C1.381,12.485,0,13.865,0,15.571z"
-                  ></path>
+                    ></path>
+                  </g>
+                  <g id="Capa_1_46_"> </g>
                 </g>
-                <g id="Capa_1_46_"> </g>
-              </g>
-            </svg>
-          </button>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="hidden w-1/3 p-6 bg-gray-50 max-w-7xl lg:block">
-      <div class="sticky top-32">
-        <h2 class="text-lg mb-4 font-semibold">Your selection</h2>
-        <div id="items" class="border-b-2 border-gray-200"></div>
-        <div class="flex justify-between">
-          <h3 class="text-lg mb-4 font-semibold">Payment</h3>
-          <span id="payment" class="text-lg font-bold">$0</span>
+      <div class="hidden w-1/3 p-6 bg-gray-50 max-w-7xl lg:block">
+        <div class="sticky top-32">
+          <h2 class="text-lg mb-4 font-semibold">Your selection</h2>
+          <div id="items" class="border-b-2 border-gray-200"></div>
+          <div class="flex justify-between">
+            <h3 class="text-lg mb-4 font-semibold">Payment</h3>
+            <span id="payment" class="text-lg font-bold">$0</span>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="px-12 py-8 bg-gray-100 w-screen fixed bottom-0 lg:hidden">
-    <div class="max-w-7xl m-auto text-3xl flex justify-between">
-      <h3 class="mb-4 font-semibold">Payment</h3>
-      <span id="payment" class="font-bold">$0</span>
-    </div>
-  </section>
-</main>
+    <section class="px-12 py-8 bg-gray-100 w-screen fixed bottom-0 lg:hidden">
+      <div class="max-w-7xl m-auto text-3xl flex justify-between">
+        <h3 class="mb-4 font-semibold">Payment</h3>
+        <span id="payment" class="font-bold">$0</span>
+      </div>
+    </section>
+  </main>
+</InscriptionLayout>
 
 <script>
   import defaultPlans from "../mock/plans.json";
