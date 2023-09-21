@@ -16,12 +16,12 @@ const months = [
   "December",
 ];
 
-const d = new Date();
-let month = months[d.getMonth() + 1];
+const date = new Date();
+let month = months[date.getMonth() + 1];
 ---
 
 <main>
-  <section class="px-12 py-8 bg-[#04040C] w-screen fixed top-0">
+  <section class="px-12 py-8 bg-[#1e1e2c] w-screen fixed top-0">
     <div class="text-white max-w-7xl m-auto flex justify-between">
       <a href="/">
         <svg
@@ -51,26 +51,24 @@ let month = months[d.getMonth() + 1];
   </section>
 
   <section class="px-12 pt-32 pb-12 lg:max-w-7xl lg:gap-6 lg:m-auto lg:flex">
-    <div class="flex flex-col gap-12 m-auto lg:w-2/3">
+    <div class="flex flex-col gap-8 m-auto lg:w-2/3">
       <div>
-        <h3 class="mb-4 font-semibold text-gray-900">Choose your plan</h3>
+        <h3 class="mb-4 font-semibold text-3xl text-gray-900 lg:text-xl">
+          Complete your information
+        </h3>
         <div class="w-full grid place-items-center">
-          <div class="hidden w-full text-center">
-            <p class="font-bold text-2xl md:text-left">Thank you!</p>
-            <p class="text-lg md:text-left">We will contact you very soon</p>
-          </div>
           <form class="w-full">
-            <div class="md:flex md:gap-4">
+            <div class="lg:flex lg:gap-4">
               <div class="w-full">
                 <label
                   for="first-name"
-                  class="block mb-2 text-sm font-medium text-gray-900"
-                  >Your first name</label
+                  class="block mb-2 text-xl font-medium text-gray-900 lg:text-base"
+                  >First name</label
                 >
                 <input
                   type="text"
                   id="first-name"
-                  class="bg-gray-50 mb-4 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-yellow-300 focus:border-yellow-300 block w-full p-2.5"
+                  class="bg-gray-50 mb-4 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-yellow-300 focus:border-yellow-300 block w-full p-2.5 lg:text-base"
                   placeholder="Name"
                   required
                 />
@@ -78,13 +76,13 @@ let month = months[d.getMonth() + 1];
               <div class="w-full">
                 <label
                   for="last-name"
-                  class="block mb-2 text-sm font-medium text-gray-900"
-                  >Your last name</label
+                  class="block mb-2 text-xl font-medium text-gray-900 lg:text-base"
+                  >Last name</label
                 >
                 <input
                   type="text"
                   id="last-name"
-                  class="bg-gray-50 mb-4 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-yellow-300 focus:border-yellow-300 block w-full p-2.5"
+                  class="bg-gray-50 mb-4 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-yellow-300 focus:border-yellow-300 block w-full p-2.5 lg:text-base"
                   placeholder="Last name"
                   required
                 />
@@ -92,25 +90,25 @@ let month = months[d.getMonth() + 1];
             </div>
             <label
               for="email-address "
-              class="block mb-2 text-sm font-medium text-gray-900"
-              >Your Email</label
+              class="block mb-2 text-xl font-medium text-gray-900 lg:text-base"
+              >Email</label
             >
             <input
               type="text"
               id="email-address"
-              class="bg-gray-50 mb-4 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-yellow-300 focus:border-yellow-300 block w-full p-2.5"
+              class="bg-gray-50 mb-4 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-yellow-300 focus:border-yellow-300 block w-full p-2.5 lg:text-base"
               placeholder="name@example.com"
               required
             />
             <label
               for="address"
-              class="block mb-2 text-sm font-medium text-gray-900"
-              >Your Address</label
+              class="block mb-2 text-xl font-medium text-gray-900 lg:text-base"
+              >Address</label
             >
             <input
               type="text"
               id="address"
-              class="bg-gray-50 mb-4 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-yellow-300 focus:border-yellow-300 block w-full p-2.5"
+              class="bg-gray-50 mb-4 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-yellow-300 focus:border-yellow-300 block w-full p-2.5 lg:text-base"
               placeholder="Example street 123"
               required
             />
@@ -118,9 +116,11 @@ let month = months[d.getMonth() + 1];
         </div>
       </div>
       <div>
-        <h3 class="mb-4 font-semibold text-gray-900">Choose your plan</h3>
+        <h3 class="mb-4 font-semibold text-xl text-gray-900 lg:text-xl">
+          Choose your plan
+        </h3>
         <ul
-          class="items-center w-full text-sm font-medium mb-4 text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex"
+          class="items-center w-full text-xl font-medium mb-4 text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex lg:text-base"
         >
           <li
             class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600"
@@ -135,7 +135,7 @@ let month = months[d.getMonth() + 1];
               />
               <label
                 for="personal-plan-selector"
-                class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                class="w-full py-4 ml-2 font-medium text-gray-900 dark:text-gray-300"
                 ><span>Personal</span>
               </label>
             </div>
@@ -153,7 +153,7 @@ let month = months[d.getMonth() + 1];
               />
               <label
                 for="enterprise-plan-selector"
-                class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                class="w-full py-4 ml-2 font-medium text-gray-900 dark:text-gray-300"
                 ><span>Enterprise</span></label
               >
             </div>
@@ -163,19 +163,19 @@ let month = months[d.getMonth() + 1];
         <div id="enterprise-name" class="w-full hidden">
           <label
             for="enterprise-name"
-            class="block mb-2 text-sm font-medium text-gray-900"
+            class="block mb-2 font-medium text-xl text-gray-900 lg:text-base"
             >Your Enterprise*</label
           >
           <input
             type="text"
-            class="bg-gray-50 mb-4 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-yellow-300 focus:border-yellow-300 block w-full p-2.5"
+            class="bg-gray-50 mb-4 border border-gray-300 text-xl text-gray-900 rounded-lg focus:ring-yellow-300 focus:border-yellow-300 block w-full p-2.5 lg:text-base"
             placeholder="Enterprise name"
             required
           />
         </div>
 
         <ul
-          class="items-center w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex"
+          class="items-center w-full font-medium text-xl text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex lg:text-base"
         >
           <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
             <div class="flex items-center pl-3">
@@ -188,7 +188,7 @@ let month = months[d.getMonth() + 1];
               />
               <label
                 for="starter-plan-selector"
-                class="w-full py-3 mx-3 text-sm font-medium text-gray-900 flex justify-between"
+                class="w-full py-4 mx-3 font-medium text-gray-900 flex justify-between"
                 ><span>Starter</span>
                 <span class="text-gray-500"></span>
               </label>
@@ -205,7 +205,7 @@ let month = months[d.getMonth() + 1];
               />
               <label
                 for="advanced-plan-selector"
-                class="w-full py-3 mx-3 text-sm font-medium text-gray-900 flex justify-between"
+                class="w-full py-4 mx-3 font-medium text-gray-900 flex justify-between"
                 ><span>Advanced</span>
                 <span class="text-gray-500"></span></label
               >
@@ -222,7 +222,7 @@ let month = months[d.getMonth() + 1];
               />
               <label
                 for="fitness-plan-selector"
-                class="w-full py-3 mx-3 text-sm font-medium text-gray-900 flex justify-between"
+                class="w-full py-4 mx-3 font-medium text-gray-900 flex justify-between"
                 ><span>Fitness</span>
                 <span class="text-gray-500"></span></label
               >
@@ -232,9 +232,11 @@ let month = months[d.getMonth() + 1];
       </div>
 
       <div>
-        <h3 class="mb-4 font-semibold text-gray-900">Aditional Classes</h3>
+        <h3 class="mb-4 font-semibold text-3xl text-gray-900 lg:text-xl">
+          Aditional Classes
+        </h3>
         <ul
-          class="w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg"
+          class="w-full text-xl font-medium text-gray-900 bg-white border border-gray-200 rounded-lg lg:text-base"
         >
           {
             gymClasses.map((gymClass) => (
@@ -249,7 +251,7 @@ let month = months[d.getMonth() + 1];
                   />
                   <label
                     for={gymClass["name"] + "-checkbox"}
-                    class="w-full py-3 mx-3 text-sm font-medium text-gray-900 dark:text-gray-300 flex justify-between"
+                    class="w-full py-4 mx-3  text-gray-900 dark:text-gray-300 flex justify-between lg:py-3"
                   >
                     <span>{gymClass["name"]}</span>
                     <span class="text-gray-500">${gymClass["price"]}</span>
@@ -260,10 +262,10 @@ let month = months[d.getMonth() + 1];
           }
         </ul>
 
-        <div class="pt-12 pb-32 flex justify-end">
+        <div class="pt-12 pb-32 text-xl flex justify-end">
           <button
             type="button"
-            class="py-3 px-5 items-center w-full bg-sky-600 text-sm font-medium text-white border border-gray-200 rounded-lg flex justify-between hover:bg-sky-500 lg:w-auto lg:gap-2"
+            class="py-3 px-5 items-center w-full bg-sky-600 font-medium text-white border border-gray-200 rounded-lg flex justify-between hover:bg-sky-500 lg:w-auto lg:gap-2 lg:text-base"
           >
             Start from {month} 1st
             <svg
@@ -306,9 +308,9 @@ let month = months[d.getMonth() + 1];
   </section>
 
   <section class="px-12 py-8 bg-gray-100 w-screen fixed bottom-0 lg:hidden">
-    <div class="max-w-7xl m-auto flex justify-between">
-      <h3 class="text-lg mb-4 font-semibold">Payment</h3>
-      <span id="payment" class="text-lg font-bold">$0</span>
+    <div class="max-w-7xl m-auto text-3xl flex justify-between">
+      <h3 class="mb-4 font-semibold">Payment</h3>
+      <span id="payment" class="font-bold">$0</span>
     </div>
   </section>
 </main>

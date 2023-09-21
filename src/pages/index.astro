@@ -33,9 +33,9 @@ import gymClasses from "../mock/gym-classes.json";
                   </p>
                   <img
                     id="claw"
-                    src="/claw.svg"
-                    class="absolute rotate-90 -top-48 left-0 opacity-[.85] w-[95%]"
-                    alt="claw"
+                    src="/claw.webp"
+                    class="absolute -top-16 opacity-[.85]"
+                    alt="claw image"
                   />
                   <p
                     class="text-5xl font-bold relative z-10 mt-4 tracking-tight sm:text-5xl"
@@ -46,7 +46,7 @@ import gymClasses from "../mock/gym-classes.json";
                 <div class="flex justify-center gap-3 mt-20 lg:justify-start">
                   <a
                     class="inline-flex items-center justify-center text-white text-lg font-semibold relative z-10 rounded-md px-6 py-2 bg-[#D1A133] hover:bg-yellow-300 focus:outline-none focus-visible:outline-gray-600"
-                    href="/pricing"
+                    href="/inscription"
                   >
                     <span class="mr-2">JOIN US!</span>
                     <svg
@@ -120,7 +120,7 @@ import gymClasses from "../mock/gym-classes.json";
     <section id="reviews" class="px-12 py-24">
       <div class="max-w-7xl m-auto">
         <p
-          class="text-center font-semibold text-4xl text-[#04040C] mb-8 md:text-5xl md:mb-14"
+          class="text-center font-semibold text-3xl text-[#04040C] mb-8 md:text-5xl md:mb-14"
         >
           WE ARE ONE OF THE BEST GYMS IN THE WORLD!
         </p>
@@ -176,7 +176,7 @@ import gymClasses from "../mock/gym-classes.json";
     <section id="classes" class="px-12 py-24 bg-[#04040C]">
       <div class="text-white max-w-7xl m-auto">
         <p
-          class="text-center font-semibold text-4xl text-white mb-4 md:text-5xl md:mb-14"
+          class="text-center font-semibold text-3xl text-white mb-4 md:text-5xl md:mb-14"
         >
           WE HAVE THE MOST VARIABLE CLASSES FOR YOU
         </p>
@@ -219,7 +219,7 @@ import gymClasses from "../mock/gym-classes.json";
     <section id="plans" class="px-12 py-24 bg-[#04040C]">
       <div class="max-w-7xl m-auto">
         <p
-          class="text-center font-semibold text-4xl text-white mb-8 md:text-5xl md:mb-14"
+          class="text-center font-semibold text-3xl text-white mb-8 md:text-5xl md:mb-14"
         >
           CHECK OUR PLANS AND JOIN US!
         </p>
@@ -242,7 +242,7 @@ import gymClasses from "../mock/gym-classes.json";
         </div>
         <div class="flex flex-col gap-8 text-white lg:flex-row lg:gap-0">
           <div
-            class="flex flex-col w-full py-8 px-12 min-h-full border border-gray-700 rounded-lg sm:p-8"
+            class="flex flex-col w-full p-6 min-h-full border border-gray-700 rounded-lg sm:p-8"
           >
             <h5 class="text-xl font-medium">Starter plan</h5>
             <h6 class="mb-4 text-sm text-gray-400 font-medium">
@@ -308,13 +308,13 @@ import gymClasses from "../mock/gym-classes.json";
               </li>
             </ul>
             <a
-              href="/pricing"
+              href="/inscription"
               class="bg-gray-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-200 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center"
               >Choose plan</a
             >
           </div>
           <div
-            class="flex flex-col w-full py-8 px-12 min-h-full border-2 border-[#D1A133] bg-gray-900 rounded-lg sm:p-8 lg:scale-105"
+            class="flex flex-col w-full p-6 min-h-full border-2 border-[#D1A133] bg-gray-900 rounded-lg sm:p-8 lg:scale-105"
           >
             <div class="flex justify-between">
               <div>
@@ -324,9 +324,9 @@ import gymClasses from "../mock/gym-classes.json";
                 </h6>
               </div>
 
-              <span class="h-fit bg-[#D1A133] py-1 px-3 rounded-full"
-                >Most popular</span
-              >
+              <p class="h-fit bg-[#D1A133] text-center py-1 px-3 rounded-full">
+                Most popular
+              </p>
             </div>
             <div class="flex items-baseline">
               <span class="text-3xl font-semibold">$</span>
@@ -405,13 +405,13 @@ import gymClasses from "../mock/gym-classes.json";
               </li>
             </ul>
             <a
-              href="/pricing"
+              href="/inscription"
               class="bg-[#D1A133] hover:bg-yellow-400 focus:ring-4 focus:outline-none focus:ring-blue-200 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center"
               >Choose plan</a
             >
           </div>
           <div
-            class="flex flex-col w-full py-8 px-12 min-h-full border border-gray-700 rounded-lg sm:p-8"
+            class="flex flex-col w-full p-6 min-h-full border border-gray-700 rounded-lg sm:p-8"
           >
             <h5 class="text-xl font-medium">Fitness plan</h5>
             <h6 class="mb-4 text-sm text-gray-400 font-medium">
@@ -511,7 +511,7 @@ import gymClasses from "../mock/gym-classes.json";
               </li>
             </ul>
             <a
-              href="/pricing"
+              href="/inscription"
               class="bg-gray-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-200 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center"
               >Choose plan</a
             >
@@ -520,9 +520,9 @@ import gymClasses from "../mock/gym-classes.json";
       </div>
     </section>
 
-    <section id="contact" class="px-12 py-24">
+    <section id="contact" class="px-12 py-24 md:pt-24 md:pb-0">
       <div class="max-w-7xl text-[#04040C] m-auto">
-        <p class="text-center font-semibold text-4xl mb-8 md:text-5xl md:mb-14">
+        <p class="text-center font-semibold text-3xl mb-8 md:text-5xl md:mb-14">
           IF YOU NEED MORE INFORMATION WE WILL CONTACT YOU!
         </p>
         <div class="md:flex">
