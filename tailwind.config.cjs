@@ -5,9 +5,13 @@ module.exports = {
 		"./node_modules/flowbite/**/*.js"
 	],
 	theme: {
-		extend: {},
-	},
-	plugins: [
-		require('flowbite/plugin')
-	],
+		extend: {
+			fontFamily: {
+				lexend: ['Lexend'],
+			},
+		},
+		plugins: [
+			require('flowbite/plugin')
+		],
+	}
 }
