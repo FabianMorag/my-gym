@@ -635,43 +635,5 @@ import gymClasses from "../mock/gym-classes.json";
   }
 </style>
 
-<script>
-  import defaultPlans from "../mock/plans.json";
-
-  const planSelector = [...document.querySelectorAll("#plan-selector button")];
-  const YELLOW_BG = "bg-[#D1A133]";
-
-  planSelector.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      if (e.target.classList.contains(YELLOW_BG)) return;
-
-      if (!e.target.classList.contains(YELLOW_BG)) {
-        const yellowBgBtn = planSelector.find((e) =>
-          e.classList.contains(YELLOW_BG)
-        );
-        yellowBgBtn.classList.remove(YELLOW_BG);
-        e.target.classList.add(YELLOW_BG);
-
-        const selection = e.target.textContent.toLowerCase();
-        const actualPrices = [
-          ...document
-            .querySelector("#plan-selector")
-            .parentElement.parentElement.querySelectorAll(".tracking-tight"),
-        ];
-        actualPrices[0].textContent = defaultPlans[selection]["starter"];
-        actualPrices[1].textContent = defaultPlans[selection]["advanced"];
-        actualPrices[2].textContent = defaultPlans[selection]["fitness"];
-      }
-    });
-  });
-</script>
-
-<script type="module">
-  const thanksMsg = document.querySelector("#contact .hidden");
-  const form = document.querySelector("#contact form");
-  document.querySelector("form").addEventListener("submit", (e) => {
-    e.preventDefault();
-    thanksMsg.classList.remove("hidden");
-    form.classList.add("hidden");
-  });
-</script>
+<script src="../scripts/planInteract.js"></script>
+<script src="../scripts/contact.js"></script>
