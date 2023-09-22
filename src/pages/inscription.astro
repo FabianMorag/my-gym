@@ -96,7 +96,7 @@ let month = months[date.getMonth() + 1];
             class="items-center w-full text-base font-medium mb-4 text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex"
           >
             <li
-              class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600"
+              class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r"
             >
               <div class="flex items-center pl-3">
                 <input
@@ -108,13 +108,13 @@ let month = months[date.getMonth() + 1];
                 />
                 <label
                   for="personal-plan-selector"
-                  class="w-full py-4 ml-2 font-medium text-gray-900 dark:text-gray-300 lg:py-3"
+                  class="w-full py-4 ml-2 font-medium text-gray-900 lg:py-3"
                   ><span>Personal</span>
                 </label>
               </div>
             </li>
             <li
-              class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600"
+              class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r"
             >
               <div class="flex items-center pl-3">
                 <input
@@ -126,7 +126,7 @@ let month = months[date.getMonth() + 1];
                 />
                 <label
                   for="enterprise-plan-selector"
-                  class="w-full py-4 ml-2 font-medium text-gray-900 dark:text-gray-300 lg:py-3"
+                  class="w-full py-4 ml-2 font-medium text-gray-900 lg:py-3"
                   ><span>Enterprise</span></label
                 >
               </div>
@@ -231,7 +231,7 @@ let month = months[date.getMonth() + 1];
                     />
                     <label
                       for={gymClass["name"] + "-checkbox"}
-                      class="w-full py-4 mx-3  text-gray-900 dark:text-gray-300 flex justify-between lg:py-3"
+                      class="w-full py-4 mx-3  text-gray-900  flex justify-between lg:py-3"
                     >
                       <span>{gymClass["name"]}</span>
                       <span class="text-gray-500">${gymClass["price"]}</span>
