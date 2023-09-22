@@ -7,7 +7,6 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "deploy": "gh-pages -d dist",
     "astro": "astro"
   },
   "dependencies": {
@@ -17,7 +16,6 @@
     "tailwindcss": "^3.3.2"
   },
   "devDependencies": {
-    "gh-pages": "5.0.0",
     "standard": "17.0.0"
   },
   "eslintConfig": {
