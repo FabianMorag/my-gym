@@ -21,19 +21,10 @@ const { title } = Astro.props;
 			rel="stylesheet"
 		/>
 	</head>
-	<body>
+	<body style="font-family: Poppins, sans-serif;">
 		<Header />
 		<slot />
 		<Footer />
 	</body>
 	<script src="../../node_modules/flowbite/dist/flowbite.min.js"></script>
 </html>
-
-<style>
-	* {
-		font-family: "Poppins", sans-serif;
-	}
-	:root {
-		font-size: 16px;
-	}
-</style>
