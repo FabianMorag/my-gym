@@ -1,4 +1,4 @@
-import defaultPlans from "../mock/plans.json";
+import defaultPlans from "../../mock/plans.json";
 
 const planSelector = [...document.querySelectorAll("#plan-selector button")];
 const YELLOW_BG = "bg-[#D1A133]";

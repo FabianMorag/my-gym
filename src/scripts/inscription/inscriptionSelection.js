@@ -1,4 +1,4 @@
-import defaultPlans from "../mock/plans.json";
+import defaultPlans from "../../mock/plans.json";
 
 const enterprisePlanInput = [...document.getElementsByName("list-radio1")];
 const planInput = [...document.getElementsByName("list-radio2")];
