@@ -27,10 +27,10 @@ let month = months[date.getMonth() + 1];
     <section class="px-12 pt-32 pb-12 lg:max-w-7xl lg:gap-6 lg:m-auto lg:flex">
       <div class="flex flex-col gap-8 m-auto lg:w-2/3">
         <div>
-          <h3 class="mb-4 font-semibold text-2xl text-gray-900 lg:text-xl">
+          <h3 class="mb-4 text-2xl font-semibold text-gray-900 lg:text-xl">
             Complete your information
           </h3>
-          <div class="w-full grid place-items-center">
+          <div class="grid w-full place-items-center">
             <form class="w-full">
               <div class="md:flex md:gap-4">
                 <div class="w-full">
@@ -85,11 +85,11 @@ let month = months[date.getMonth() + 1];
           </div>
         </div>
         <div>
-          <h3 class="mb-4 font-semibold text-2xl text-gray-900 lg:text-xl">
+          <h3 class="mb-4 text-2xl font-semibold text-gray-900 lg:text-xl">
             Choose your plan
           </h3>
           <ul
-            class="items-center w-full text-base mb-4 text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex"
+            class="items-center w-full mb-4 text-base text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex"
           >
             <li
               class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r"
@@ -100,7 +100,7 @@ let month = months[date.getMonth() + 1];
                   type="radio"
                   value=""
                   name="list-radio1"
-                  class="prices w-4 h-4 text-yellow-400 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
+                  class="w-4 h-4 text-yellow-400 bg-gray-100 border-gray-300 prices focus:ring-blue-500 focus:ring-2"
                 />
                 <label
                   for="personal-plan-selector"
@@ -118,7 +118,7 @@ let month = months[date.getMonth() + 1];
                   type="radio"
                   value=""
                   name="list-radio1"
-                  class="prices w-4 h-4 text-yellow-400 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
+                  class="w-4 h-4 text-yellow-400 bg-gray-100 border-gray-300 prices focus:ring-blue-500 focus:ring-2"
                 />
                 <label
                   for="enterprise-plan-selector"
@@ -129,7 +129,7 @@ let month = months[date.getMonth() + 1];
             </li>
           </ul>
 
-          <div id="enterprise-name" class="w-full hidden">
+          <div id="enterprise-name" class="hidden w-full">
             <label for="company-name" class="block mb-2 text-base text-gray-900"
               >Your Enterprise*</label
             >
@@ -141,7 +141,7 @@ let month = months[date.getMonth() + 1];
               required
             />
           </div>
-          <h3 class="mb-4 font-semibold text-2xl text-gray-900 lg:text-xl">
+          <h3 class="mb-4 text-2xl font-semibold text-gray-900 lg:text-xl">
             Choose your level
           </h3>
           <ul
@@ -156,11 +156,11 @@ let month = months[date.getMonth() + 1];
                   type="radio"
                   value=""
                   name="list-radio2"
-                  class="prices w-4 h-4 text-yellow-400 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
+                  class="w-4 h-4 text-yellow-400 bg-gray-100 border-gray-300 prices focus:ring-blue-500 focus:ring-2"
                 />
                 <label
                   for="starter-plan-selector"
-                  class="w-full py-4 mx-3 text-gray-900 flex justify-between lg:py-3"
+                  class="flex justify-between w-full py-4 mx-3 text-gray-900 lg:py-3"
                   ><span>Starter</span>
                   <span class="text-gray-500"></span>
                 </label>
@@ -175,11 +175,11 @@ let month = months[date.getMonth() + 1];
                   type="radio"
                   value=""
                   name="list-radio2"
-                  class="prices w-4 h-4 text-yellow-400 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
+                  class="w-4 h-4 text-yellow-400 bg-gray-100 border-gray-300 prices focus:ring-blue-500 focus:ring-2"
                 />
                 <label
                   for="advanced-plan-selector"
-                  class="w-full py-4 mx-3 text-gray-900 flex justify-between lg:py-3"
+                  class="flex justify-between w-full py-4 mx-3 text-gray-900 lg:py-3"
                   ><span>Advanced</span>
                   <span class="text-gray-500"></span></label
                 >
@@ -194,11 +194,11 @@ let month = months[date.getMonth() + 1];
                   type="radio"
                   value=""
                   name="list-radio2"
-                  class="prices w-4 h-4 text-yellow-400 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
+                  class="w-4 h-4 text-yellow-400 bg-gray-100 border-gray-300 prices focus:ring-blue-500 focus:ring-2"
                 />
                 <label
                   for="fitness-plan-selector"
-                  class="w-full py-4 mx-3 text-gray-900 flex justify-between lg:py-3"
+                  class="flex justify-between w-full py-4 mx-3 text-gray-900 lg:py-3"
                   ><span>Fitness</span>
                   <span class="text-gray-500"></span></label
                 >
@@ -208,7 +208,7 @@ let month = months[date.getMonth() + 1];
         </div>
 
         <div>
-          <h3 class="mb-4 font-semibold text-2xl text-gray-900 lg:text-xl">
+          <h3 class="mb-4 text-2xl font-semibold text-gray-900 lg:text-xl">
             Aditional Classes
           </h3>
           <ul
@@ -223,11 +223,11 @@ let month = months[date.getMonth() + 1];
                       type="checkbox"
                       value=""
                       name="list-radio3"
-                      class="prices w-4 h-4 text-yellow-400 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
+                      class="w-4 h-4 text-yellow-400 bg-gray-100 border-gray-300 rounded prices focus:ring-blue-500 focus:ring-2"
                     />
                     <label
                       for={gymClass["name"] + "-checkbox"}
-                      class="w-full py-4 mx-3  text-gray-900  flex justify-between lg:py-3"
+                      class="flex justify-between w-full py-4 mx-3 text-gray-900 lg:py-3"
                     >
                       <span>{gymClass["name"]}</span>
                       <span class="text-gray-500">${gymClass["price"]}</span>
@@ -238,10 +238,10 @@ let month = months[date.getMonth() + 1];
             }
           </ul>
 
-          <div class="pt-12 pb-32 text-lg flex justify-end">
+          <div class="flex justify-end pt-12 pb-32 text-lg">
             <button
               type="button"
-              class="py-3 px-5 font-medium items-center w-full bg-sky-700 text-white border border-gray-200 rounded-lg flex justify-between hover:bg-sky-600 lg:w-auto lg:gap-2 lg:text-base"
+              class="flex items-center justify-between w-full px-5 py-3 font-medium text-white border border-gray-200 rounded-lg bg-sky-700 hover:bg-sky-600 lg:w-auto lg:gap-2 lg:text-base"
             >
               Start from {month} 1st
               <Arrow className="h-6" />
@@ -252,18 +252,18 @@ let month = months[date.getMonth() + 1];
 
       <div class="hidden w-1/3 p-6 bg-gray-50 max-w-7xl lg:block">
         <div class="sticky top-32">
-          <h2 class="text-lg mb-4 font-semibold">Your selection</h2>
+          <h2 class="mb-4 text-lg font-semibold">Your selection</h2>
           <div id="items" class="border-b-2 border-gray-200"></div>
           <div class="flex justify-between">
-            <h3 class="text-lg mb-4 font-semibold">Payment</h3>
+            <h3 class="mb-4 text-lg font-semibold">Payment</h3>
             <span id="payment" class="text-lg font-bold">$0</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="px-12 py-6 bg-gray-100 w-screen fixed bottom-0 lg:hidden">
-      <div class="max-w-7xl m-auto text-xl flex justify-between">
+    <section class="fixed bottom-0 w-screen px-12 py-6 bg-gray-100 lg:hidden">
+      <div class="flex justify-between m-auto text-xl max-w-7xl">
         <h3 class="font-semibold">Payment</h3>
         <span id="payment" class="font-bold">$0</span>
       </div>

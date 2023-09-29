@@ -7,19 +7,19 @@ import gymClasses from "../mock/gym-classes.json";
 <Layout>
   <main>
     <section id="classes" class="px-12 py-40">
-      <div class="text-white max-w-7xl m-auto">
+      <div class="m-auto text-white max-w-7xl">
         <p
           class="text-center font-semibold text-[#04040C] text-4xl mb-4 md:text-5xl md:mb-14"
         >
           CHOOSE THE CLASS FOR YOU
         </p>
         <p
-          class="text-center font-semibold text-md text-gray-500 mb-12 md:text-xl md:mb-20"
+          class="mb-12 font-semibold text-center text-gray-500 text-md md:text-xl md:mb-20"
         >
           THERE ARE CLASSES FOR EVERYONE!
         </p>
         <div
-          class="grid grid-cols-2 gap-6 place-items-center mb-10 md:text-lg md:grid-cols-3"
+          class="grid grid-cols-2 gap-6 mb-10 place-items-center md:text-lg md:grid-cols-3"
         >
           {
             gymClasses.map((gymClass) => (

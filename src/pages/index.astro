@@ -23,7 +23,7 @@ import CheckIcon from "../components/icons/check.astro";
               <div class="max-w-xl text-center md:text-left">
                 <div>
                   <p
-                    class="text-base text-gray-300 font-medium relative z-10 tracking-tight sm:text-lg"
+                    class="relative z-10 text-base font-medium tracking-tight text-gray-300 sm:text-lg"
                   >
                     COME AND TRAIN WITH US
                   </p>
@@ -34,7 +34,7 @@ import CheckIcon from "../components/icons/check.astro";
                     alt="claw image"
                   />
                   <p
-                    class="text-4xl font-bold relative z-10 mt-4 tracking-tight lg:text-5xl"
+                    class="relative z-10 mt-4 text-4xl font-bold tracking-tight lg:text-5xl"
                   >
                     LET'S GET A FIT AND<br />PERFECT BODY
                   </p>
@@ -51,7 +51,7 @@ import CheckIcon from "../components/icons/check.astro";
               </div>
               <div class="relative z-10">
                 <ul
-                  class="flex flex-row gap-6 justify-center mt-8 md:p-0 md:flex-col md:gap-4"
+                  class="flex flex-row justify-center gap-6 mt-8 md:p-0 md:flex-col md:gap-4"
                 >
                   <li>
                     <a
@@ -72,7 +72,7 @@ import CheckIcon from "../components/icons/check.astro";
             </div>
             <div class="order-first block w-full my-12 md:mt-0">
               <img
-                src="/images/main-hero.png"
+                src="/images/main-hero.webp"
                 class="w-full mx-auto md:ml-auto"
                 alt="hero"
               />
@@ -83,7 +83,7 @@ import CheckIcon from "../components/icons/check.astro";
     </section>
 
     <section id="reviews" class="px-12 py-24">
-      <div class="max-w-7xl m-auto">
+      <div class="m-auto max-w-7xl">
         <p
           class="text-center font-semibold text-3xl text-[#04040C] mb-8 md:text-5xl md:mb-14"
         >
@@ -123,7 +123,7 @@ import CheckIcon from "../components/icons/check.astro";
           Our quality and commitment is priority
         </p>
         <p
-          class="text-center font-semibold text-xl text-gray-500 mb-8 md:text-2xl md:mb-14"
+          class="mb-8 text-xl font-semibold text-center text-gray-500 md:text-2xl md:mb-14"
         >
           We are involved in all your proccess!
         </p>
@@ -131,19 +131,19 @@ import CheckIcon from "../components/icons/check.astro";
     </section>
 
     <section id="classes" class="px-12 py-24 bg-[#04040C]">
-      <div class="text-white max-w-7xl m-auto">
+      <div class="m-auto text-white max-w-7xl">
         <p
-          class="text-center font-semibold text-3xl text-white mb-4 md:text-5xl md:mb-14"
+          class="mb-4 text-3xl font-semibold text-center text-white md:text-5xl md:mb-14"
         >
           WE HAVE THE MOST VARIABLE CLASSES FOR YOU
         </p>
         <p
-          class="text-center font-semibold text-md text-gray-500 mb-12 md:text-xl md:mb-20"
+          class="mb-12 font-semibold text-center text-gray-500 text-md md:text-xl md:mb-20"
         >
           THERE ARE CLASSES FOR EVERYONE!
         </p>
         <div
-          class="grid grid-cols-2 gap-3 place-items-center mb-10 md:text-lg md:grid-cols-3 md:gap-6"
+          class="grid grid-cols-2 gap-3 mb-10 place-items-center md:text-lg md:grid-cols-3 md:gap-6"
         >
           {
             gymClasses.map((gymClass) => (
@@ -164,26 +164,26 @@ import CheckIcon from "../components/icons/check.astro";
 
     <section class="px-12 py-12">
       <div class="text-[#04040C] max-w-7xl m-auto">
-        <p class="text-center font-semibold text-2xl mb-4">
+        <p class="mb-4 text-2xl font-semibold text-center">
           SUBSCRIBE TO CLASSES AND COME FOR ALL THE SESSION YOU WISH⚡
         </p>
-        <p class="text-center text-gray-500 font-semibold text-lg">
+        <p class="text-lg font-semibold text-center text-gray-500">
           START YOUR MEMBERSHIP NOW!
         </p>
       </div>
     </section>
 
     <section id="plans" class="px-12 py-24 bg-[#04040C]">
-      <div class="max-w-7xl m-auto">
+      <div class="m-auto max-w-7xl">
         <p
-          class="text-center font-semibold text-3xl text-white mb-8 md:text-5xl md:mb-14"
+          class="mb-8 text-3xl font-semibold text-center text-white md:text-5xl md:mb-14"
         >
           CHECK OUR PLANS AND JOIN US!
         </p>
         <div class="flex">
           <div
             id="plan-selector"
-            class="text-white border border-gray-600 rounded-3xl mx-auto mb-8 p-1"
+            class="p-1 mx-auto mb-8 text-white border border-gray-600 rounded-3xl"
           >
             <button
               type="button"
@@ -192,17 +192,17 @@ import CheckIcon from "../components/icons/check.astro";
             >
             <button
               type="button"
-              class="rounded-2xl ease-in-out duration-150 py-1 px-2"
+              class="px-2 py-1 duration-150 ease-in-out rounded-2xl"
               >Enterprise</button
             >
           </div>
         </div>
         <div class="flex flex-col gap-8 text-white lg:flex-row lg:gap-0">
           <div
-            class="flex flex-col w-full p-6 min-h-full border border-gray-700 rounded-lg sm:p-8"
+            class="flex flex-col w-full min-h-full p-6 border border-gray-700 rounded-lg sm:p-8"
           >
             <h5 class="text-xl font-medium">Starter plan</h5>
-            <h6 class="mb-4 text-sm text-gray-400 font-medium">
+            <h6 class="mb-4 text-sm font-medium text-gray-400">
               Monthly billed
             </h6>
             <div class="flex items-baseline">
@@ -246,7 +246,7 @@ import CheckIcon from "../components/icons/check.astro";
             <div class="flex justify-between">
               <div>
                 <h5 class="text-xl font-medium">Advanced plan</h5>
-                <h6 class="mb-4 text-sm text-gray-400 font-medium">
+                <h6 class="mb-4 text-sm font-medium text-gray-400">
                   Quarterly billed
                 </h6>
               </div>
@@ -298,10 +298,10 @@ import CheckIcon from "../components/icons/check.astro";
             >
           </div>
           <div
-            class="flex flex-col w-full p-6 min-h-full border border-gray-700 rounded-lg sm:p-8"
+            class="flex flex-col w-full min-h-full p-6 border border-gray-700 rounded-lg sm:p-8"
           >
             <h5 class="text-xl font-medium">Fitness plan</h5>
-            <h6 class="mb-4 text-sm text-gray-400 font-medium">
+            <h6 class="mb-4 text-sm font-medium text-gray-400">
               Anually billed
             </h6>
             <div class="flex items-baseline">
@@ -359,20 +359,20 @@ import CheckIcon from "../components/icons/check.astro";
 
     <section id="contact" class="px-12 py-24 md:pt-24 md:pb-0">
       <div class="max-w-7xl text-[#04040C] m-auto">
-        <p class="text-center font-semibold text-2xl mb-8 md:text-5xl md:mb-14">
+        <p class="mb-8 text-2xl font-semibold text-center md:text-5xl md:mb-14">
           IF YOU NEED MORE INFORMATION WE WILL CONTACT YOU!
         </p>
         <div class="md:flex">
-          <div class="w-full grid place-items-center mb-8">
+          <div class="grid w-full mb-8 place-items-center">
             <img
               src="/images/class.webp"
               alt="A man and a woman talking and looking a book"
               class="max-h-96 md:h-[30rem]"
             />
           </div>
-          <div class="w-full grid place-items-center">
+          <div class="grid w-full place-items-center">
             <div class="hidden w-full text-center">
-              <p class="font-bold text-2xl md:text-left">Thank you!</p>
+              <p class="text-2xl font-bold md:text-left">Thank you!</p>
               <p class="text-lg md:text-left">We will contact you very soon</p>
             </div>
             <form class="w-full">
