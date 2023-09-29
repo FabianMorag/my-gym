@@ -12,5 +12,5 @@ npm run dev
 ```
 ### Screen capture
 
-![This is a screen capture of the landing page.](public/capture.png)
+![This is a screen capture of the landing page.](public/images/capture.png)
 
